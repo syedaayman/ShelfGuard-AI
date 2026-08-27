@@ -1,0 +1,541 @@
+sku,product_name,category,manufacturer,base_price,mrp,batch_number,manufacturing_date,expiry_date,stock_quantity,daily_demand,status
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1310,2026-04-08,2026-12-26,303,3,SAFE
+SAUCE-KETCHUP-001,Kissan Fresh Tomato Ketchup 950g,Sauces,Hindustan Unilever,135.0,150.0,BKET-1169,2025-12-06,2026-09-17,138,17,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1240,2025-12-23,2026-11-18,170,27,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1415,2026-04-16,2026-09-01,36,9,WARNING
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1531,2026-03-03,2026-08-25,145,26,EXPIRED
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1149,2026-04-30,2027-01-04,297,15,SAFE
+BEV-COFFEE-004,Nescafe Classic Instant Coffee 100g,Beverages,Dabur India,310.0,325.0,BCOF-1463,2025-09-22,2026-08-28 08:05:06,285,22,CRITICAL
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1478,2026-04-03,2026-08-28 19:00:18,308,5,CRITICAL
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1490,2026-01-12,2026-08-27 18:03:46,336,15,DONATION
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1171,2026-03-15,2027-02-06,294,7,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1526,2026-02-19,2026-08-17 22:43:39,85,24,EXPIRED
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1462,2025-12-15,2026-08-28 05:13:12,115,16,CRITICAL
+SAUCE-CHILLI-005,Heinz Sweet Chilli Sauce 300g,Sauces,Hindustan Unilever,160.0,175.0,BCHI-1453,2025-12-03,2026-08-28 17:55:04,258,5,CRITICAL
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1460,2025-10-23,2026-08-28 15:11:57,214,2,CRITICAL
+DAIRY-CHEESE-005,Britannia Processed Cheese Slices 200g,Dairy,Amul India,140.0,145.0,BCHE-1374,2026-04-24,2026-10-23,343,25,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1100,2026-09-28,2027-01-16,141,8,SAFE
+RTE-PANEER-001,MTR Ready to Eat Paneer Butter Masala 300g,Ready-to-eat foods,MTR Foods,140.0,150.0,BPAN-1075,2026-07-27,2026-10-25,122,15,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1212,2026-05-05,2026-09-15 07:43:07,64,25,SAFE
+CER-MUESLI-003,Baggry's Crunchy Muesli Fruit & Nut 400g,Cereals,Kellogg India,270.0,290.0,BMUE-1472,2025-11-28,2026-08-28 21:39:11,19,17,CRITICAL
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1193,2026-04-23,2026-11-19,65,23,SAFE
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1404,2026-10-12,2027-02-09,53,28,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1477,2025-10-08,2026-08-28 04:30:27,304,25,CRITICAL
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1284,2026-04-24,2027-02-05,110,17,SAFE
+COND-MUSTARD-002,French's Classic Yellow Mustard 226g,Condiments,Wingreens Farms,210.0,230.0,BMUS-1004,2025-12-31,2026-11-15,18,26,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1496,2026-03-24,2026-08-27 17:18:15,304,17,DONATION
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1251,2026-05-16,2026-09-26,207,22,SAFE
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1059,2026-04-27,2026-09-29 07:42:17,201,27,SAFE
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1204,2026-09-09,2026-12-23 22:58:45,260,14,SAFE
+CANNED-BEANS-003,Heinz Baked Beans in Tomato Sauce 415g,Canned Foods,Del Monte India,140.0,150.0,BBEA-1119,2026-05-19,2026-10-17,176,5,SAFE
+DISC-PARLEG-001,Parle-G Gold Biscuits 1kg,Biscuits,Parle Products,120.0,130.0,BPAR-1356,2026-09-30,2027-01-05,166,20,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1241,2026-03-19,2026-12-14,173,16,SAFE
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1264,2026-02-28,2026-09-19,193,2,SAFE
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1271,2025-12-26,2026-11-15 07:23:29,270,21,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1398,2026-05-05,2027-01-13,204,12,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1135,2026-08-29,2027-02-07 19:01:23,99,27,SAFE
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1297,2026-05-02,2026-10-08,246,7,SAFE
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1513,2026-04-06,2026-08-17 02:07:26,322,21,EXPIRED
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1422,2025-12-20,2026-09-03 03:41:48,154,27,WARNING
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1262,2026-09-12,2027-02-01,279,5,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1446,2026-01-25,2026-08-30,196,7,WARNING
+SPICE-CHILLI-002,MDH Deggi Mirch Powder 100g,Spices,MDH Spices,95.0,100.0,BCHI-1220,2026-06-02,2026-09-15 17:53:42,286,8,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1036,2026-08-11,2026-12-29 03:34:42,188,27,SAFE
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1129,2025-12-20,2026-10-25,332,3,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1078,2026-02-21,2026-09-19,130,27,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1399,2026-02-20,2026-09-11,23,10,SAFE
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1450,2026-03-18,2026-09-01,27,17,WARNING
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1017,2026-01-26,2026-11-16,85,18,SAFE
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1434,2026-02-23,2026-09-01,84,11,WARNING
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1349,2026-05-20,2027-01-12,345,3,SAFE
+DISC-FANTASY-003,Sunfeast Dark Fantasy Choco Fills 300g,Biscuits,Parle Products,160.0,175.0,BFAN-1392,2026-07-20,2026-11-07,111,27,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1235,2026-04-21,2026-09-16,114,26,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1476,2026-01-10,2026-08-28 09:12:53,130,19,CRITICAL
+INST-MAGGI-001,Nestle Maggi 2-Minute Masala Noodles 560g,Instant Foods,Nestle India,110.0,120.0,BMAG-1429,2025-12-19,2026-09-01,21,11,WARNING
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1416,2025-10-04,2026-09-02 20:15:20,53,23,WARNING
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1319,2026-06-07,2027-02-12 04:11:04,96,17,SAFE
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1329,2025-10-11,2026-09-29 11:13:09,328,12,SAFE
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1207,2026-03-26,2026-12-07,320,18,SAFE
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1092,2025-12-08,2026-09-04 17:35:03,214,28,SAFE
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1130,2026-08-02,2027-02-14,150,23,SAFE
+JUICE-COCO-002,RAW Pressery 100% Tender Coconut Water 200ml,Juices,Dabur India,60.0,65.0,BCOC-1320,2026-03-21,2026-11-23,61,14,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1125,2026-01-12,2026-11-23,41,10,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1095,2026-08-25,2027-01-27,288,2,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1234,2026-03-08,2026-11-11,128,12,SAFE
+INST-POHA-005,Saffola FITTIFY Instant Gourmet Poha 80g,Instant Foods,Nestle India,40.0,45.0,BPOH-1534,2026-02-26,2026-08-26,33,19,EXPIRED
+INST-SOUP-002,Knorr Thick Tomato Soup 53g,Instant Foods,Nestle India,50.0,55.0,BSOU-1367,2026-04-23,2026-09-17 05:14:30,295,18,SAFE
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1216,2025-10-29,2026-09-30 11:14:44,70,13,SAFE
+JUICE-ORANGE-003,Minute Maid Pulpy Orange Drink 1L,Juices,Dabur India,90.0,99.0,BORA-1385,2026-02-10,2026-10-11 22:26:34,300,20,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1065,2025-11-17,2026-10-08,131,9,SAFE
+PICKLE-MIXED-004,Nilon's Mixed Vegetable Pickle 500g,Pickles,Desai Foods (Mother's Recipe),130.0,140.0,BMIX-1005,2026-04-13,2027-01-02 10:23:38,125,26,SAFE
+SNACK-NUTS-005,Nutraj Salted Roasted Almonds 200g,Snacks,PepsiCo India,280.0,300.0,BNUT-1117,2026-01-21,2026-10-26,286,13,SAFE
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1524,2026-04-18,2026-08-19,238,25,EXPIRED
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1403,2026-02-25,2026-11-22 09:33:21,294,17,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1084,2026-04-04,2027-02-14,273,15,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1345,2026-06-10,2027-01-24,154,6,SAFE
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1074,2025-12-26,2026-10-06,104,21,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1346,2026-05-21,2026-12-19 04:10:30,286,9,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1069,2026-03-24,2026-12-15,175,15,SAFE
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1471,2026-02-24,2026-08-28 09:05:28,176,28,CRITICAL
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1174,2025-12-11,2026-09-22,309,11,SAFE
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1121,2026-02-26,2027-02-19,66,28,SAFE
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1094,2025-12-20,2026-09-08,222,25,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1452,2025-12-06,2026-08-28 11:21:07,248,27,CRITICAL
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1354,2026-02-28,2027-02-21,83,18,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1132,2025-12-25,2026-11-20 14:42:21,133,11,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1151,2026-04-03,2026-11-28,154,15,SAFE
+DAIRY-MILK-001,Amul Taaza Toned Milk 1L,Dairy,Amul India,54.0,56.0,BMIL-1435,2025-12-17,2026-09-03,209,27,WARNING
+DISC-FANTASY-003,Sunfeast Dark Fantasy Choco Fills 300g,Biscuits,Parle Products,160.0,175.0,BFAN-1360,2026-06-16,2027-02-15,308,2,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1281,2026-02-24,2027-02-12,293,17,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1131,2026-04-05,2026-09-30,95,2,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1266,2026-02-01,2026-10-12,347,12,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1213,2026-09-24,2027-01-22,302,19,SAFE
+BEV-COFFEE-004,Nescafe Classic Instant Coffee 100g,Beverages,Dabur India,310.0,325.0,BCOF-1190,2025-09-20,2026-09-20 12:27:44,247,13,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1308,2026-05-06,2026-12-22 12:36:09,170,21,SAFE
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1160,2026-09-16,2027-02-17,317,12,SAFE
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1474,2025-09-21,2026-08-28 13:39:45,227,24,CRITICAL
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1035,2025-11-14,2026-09-20,225,16,SAFE
+INST-SOUP-002,Knorr Thick Tomato Soup 53g,Instant Foods,Nestle India,50.0,55.0,BSOU-1292,2026-07-25,2026-11-08,245,13,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1118,2026-06-09,2027-02-23,247,10,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1060,2026-07-24,2027-02-06,67,13,SAFE
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1233,2026-06-27,2027-01-27,220,18,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1358,2026-06-27,2026-11-12 00:34:24,86,17,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1259,2026-08-02,2027-02-07,307,16,SAFE
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1217,2026-03-19,2026-11-06,234,19,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1195,2026-03-29,2027-02-14 19:30:37,123,22,SAFE
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1466,2026-04-18,2026-08-29 09:01:31,83,12,CRITICAL
+DAIRY-MILK-001,Amul Taaza Toned Milk 1L,Dairy,Amul India,54.0,56.0,BMIL-1499,2025-10-22,2026-08-27 20:34:29,118,24,DONATION
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1396,2026-04-06,2027-01-15,347,13,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1503,2026-05-29,2026-08-27 19:08:02,124,17,DONATION
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1050,2026-03-01,2026-09-16,82,13,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1265,2025-09-30,2026-09-12,212,4,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1083,2025-12-29,2026-11-21,301,21,SAFE
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1298,2026-06-15,2027-02-23,48,19,SAFE
+SNACK-BHUJIA-003,Haldiram's Nagpur Alooo Bhujia 400g,Snacks,PepsiCo India,120.0,130.0,BBHU-1401,2026-04-07,2026-11-08,350,23,SAFE
+SNACK-NUTS-005,Nutraj Salted Roasted Almonds 200g,Snacks,PepsiCo India,280.0,300.0,BNUT-1366,2026-08-21,2026-12-30,285,24,SAFE
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1394,2026-04-06,2026-10-10,75,25,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1311,2026-02-04,2026-09-17,307,15,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1051,2026-04-29,2027-02-02 18:05:13,239,28,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1189,2026-06-02,2026-09-23,170,17,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1138,2026-02-08,2026-12-16,324,10,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1334,2026-02-22,2026-12-03 08:40:47,139,3,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1109,2025-11-26,2026-11-18,153,21,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1143,2025-12-05,2026-11-13 21:26:33,220,28,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1405,2026-03-18,2027-01-13 21:07:18,337,9,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1328,2026-04-04,2026-09-11,257,18,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1363,2026-04-26,2026-12-23,128,9,SAFE
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1393,2026-06-19,2027-01-06,185,11,SAFE
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1268,2026-02-16,2027-01-12,17,4,SAFE
+SAUCE-CHILLI-005,Heinz Sweet Chilli Sauce 300g,Sauces,Hindustan Unilever,160.0,175.0,BCHI-1418,2025-11-12,2026-09-01,168,7,WARNING
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1201,2025-11-11,2026-09-12,47,17,SAFE
+DAIRY-PANEER-003,Mother Dairy Fresh Paneer 200g,Dairy,Amul India,90.0,95.0,BPAN-1269,2026-05-04,2026-10-17,326,18,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1186,2026-05-19,2026-12-29,341,13,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1406,2026-10-01,2027-01-03 23:52:09,248,13,SAFE
+DAIRY-PANEER-003,Mother Dairy Fresh Paneer 200g,Dairy,Amul India,90.0,95.0,BPAN-1381,2026-06-13,2026-10-15 07:52:50,32,16,SAFE
+DAIRY-MILK-001,Amul Taaza Toned Milk 1L,Dairy,Amul India,54.0,56.0,BMIL-1378,2026-05-15,2027-01-12,293,15,SAFE
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1200,2026-04-07,2026-11-04,23,7,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1337,2026-01-13,2027-01-03 18:04:58,181,23,SAFE
+FROZEN-MOMOS-003,Prasuma Chicken Veg Momos 24pcs,Frozen Foods,McCain Foods,290.0,320.0,BMOM-1497,2026-05-05,2026-08-27 20:05:10,38,5,DONATION
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1040,2026-05-11,2026-11-26,45,7,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1368,2026-06-28,2026-12-11 17:49:39,281,16,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1521,2025-09-10,2026-08-22,231,24,EXPIRED
+INST-UPMA-004,MTR Instant Vegetable Upma Mix 160g,Instant Foods,Nestle India,45.0,50.0,BUPM-1387,2026-05-09,2027-01-17,224,6,SAFE
+BAKERY-PASTRY-004,Monginis Choco Lava Cake 75g,Bakery,Britannia Industries,40.0,45.0,BPAS-1536,2026-03-23,2026-08-21,41,7,EXPIRED
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1447,2025-11-11,2026-09-01,184,27,WARNING
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1373,2026-08-08,2026-12-06,50,17,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1276,2026-03-16,2026-12-22 15:08:57,23,13,SAFE
+FROZEN-MOMOS-003,Prasuma Chicken Veg Momos 24pcs,Frozen Foods,McCain Foods,290.0,320.0,BMOM-1210,2026-04-05,2027-01-24,63,12,SAFE
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1338,2026-03-28,2026-12-03,250,19,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1142,2026-02-15,2026-11-02,68,7,SAFE
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1105,2026-06-01,2027-01-01 03:09:55,169,23,SAFE
+SNACK-NUTS-005,Nutraj Salted Roasted Almonds 200g,Snacks,PepsiCo India,280.0,300.0,BNUT-1425,2026-04-22,2026-09-01 23:33:27,209,24,WARNING
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1517,2026-04-18,2026-08-22,21,13,EXPIRED
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1227,2026-05-20,2027-01-13,18,17,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1214,2026-03-03,2026-12-28,231,25,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1336,2026-03-19,2026-09-29,328,17,SAFE
+INST-UPMA-004,MTR Instant Vegetable Upma Mix 160g,Instant Foods,Nestle India,45.0,50.0,BUPM-1041,2025-11-19,2026-09-04 02:03:37,247,11,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1112,2026-03-02,2026-12-11,268,12,SAFE
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1455,2026-04-01,2026-08-27 23:48:48,26,12,CRITICAL
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1443,2026-03-15,2026-08-30,208,4,WARNING
+JUICE-ORANGE-003,Minute Maid Pulpy Orange Drink 1L,Juices,Dabur India,90.0,99.0,BORA-1449,2026-02-10,2026-09-01,215,16,WARNING
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1008,2026-01-22,2026-10-24,50,3,SAFE
+JUICE-GUAVA-001,B-Natural Pink Guava Juice 1L,Juices,Dabur India,105.0,115.0,BGUA-1321,2026-04-22,2026-11-21 18:37:21,195,3,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1464,2025-11-11,2026-08-28 20:48:01,315,5,CRITICAL
+SAUCE-MAYO-003,Veeba Eggless Mayonnaise 250g,Sauces,Hindustan Unilever,75.0,85.0,BMAY-1153,2026-02-25,2027-02-10,84,4,SAFE
+JUICE-APPLE-004,Real Fruit Power Himalayan Apple Juice 1L,Juices,Dabur India,115.0,125.0,BAPP-1390,2026-02-24,2026-09-26 21:36:01,184,22,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1024,2026-04-11,2026-09-30,286,2,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1376,2026-07-25,2026-12-30,193,5,SAFE
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1225,2025-10-18,2026-09-22,172,3,SAFE
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1305,2026-05-02,2026-10-05,43,28,SAFE
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1348,2026-03-18,2026-09-04,258,17,SAFE
+FROZEN-NUGGETS-004,Sumeru Crispy Chicken Nuggets 500g,Frozen Foods,McCain Foods,240.0,260.0,BNUG-1421,2025-10-20,2026-08-29 23:01:19,53,12,WARNING
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1088,2026-06-19,2026-10-28 23:54:37,133,14,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1179,2025-12-16,2026-10-27 03:11:13,201,25,SAFE
+DAIRY-PANEER-003,Mother Dairy Fresh Paneer 200g,Dairy,Amul India,90.0,95.0,BPAN-1230,2026-07-16,2026-11-22,309,15,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1283,2026-01-15,2026-10-20,219,25,SAFE
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1388,2025-11-07,2026-11-07,130,11,SAFE
+FROZEN-MOMOS-003,Prasuma Chicken Veg Momos 24pcs,Frozen Foods,McCain Foods,290.0,320.0,BMOM-1006,2025-12-11,2026-09-21 09:17:17,191,21,SAFE
+BEV-COFFEE-004,Nescafe Classic Instant Coffee 100g,Beverages,Dabur India,310.0,325.0,BCOF-1369,2026-01-24,2026-12-30 08:20:26,276,16,SAFE
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1473,2025-11-15,2026-08-28 05:31:49,302,18,CRITICAL
+PICKLE-MIXED-004,Nilon's Mixed Vegetable Pickle 500g,Pickles,Desai Foods (Mother's Recipe),130.0,140.0,BMIX-1019,2026-03-18,2027-01-18,212,14,SAFE
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1116,2026-08-14,2026-11-20 05:02:23,128,14,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1042,2026-01-28,2027-01-02 03:58:13,166,8,SAFE
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1058,2026-04-10,2026-09-23,204,20,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1176,2026-03-01,2027-02-08,161,26,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1167,2026-07-03,2026-10-29 19:16:13,206,15,SAFE
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1148,2026-03-02,2027-02-03 00:37:44,337,21,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1123,2026-06-04,2026-09-25,298,11,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1391,2026-05-07,2027-02-10 04:21:14,112,3,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1226,2026-07-16,2026-11-11 01:27:31,169,8,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1486,2025-12-31,2026-08-27 16:27:26,163,20,DONATION
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1205,2026-01-24,2026-12-31,242,4,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1326,2026-05-09,2026-09-25,188,19,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1322,2025-11-26,2026-10-22 08:44:39,19,5,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1106,2026-09-30,2027-01-19,234,23,SAFE
+INST-UPMA-004,MTR Instant Vegetable Upma Mix 160g,Instant Foods,Nestle India,45.0,50.0,BUPM-1221,2026-02-24,2026-11-15 07:25:13,174,25,SAFE
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1108,2025-12-20,2026-09-21,250,24,SAFE
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1254,2026-04-29,2026-10-06 21:56:14,166,27,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1342,2026-01-12,2026-10-23,217,28,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1099,2026-07-31,2026-11-24,194,9,SAFE
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1013,2026-01-28,2026-10-11,43,9,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1248,2026-09-21,2027-01-15,346,12,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1185,2026-10-13,2027-01-18 10:26:44,78,16,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1028,2026-08-24,2027-02-14 10:32:15,325,15,SAFE
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1493,2026-04-12,2026-08-27 18:31:31,249,22,DONATION
+CANNED-BEANS-003,Heinz Baked Beans in Tomato Sauce 415g,Canned Foods,Del Monte India,140.0,150.0,BBEA-1397,2025-10-31,2026-10-18,253,5,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1257,2026-09-16,2027-01-06,136,16,SAFE
+DAIRY-MILK-001,Amul Taaza Toned Milk 1L,Dairy,Amul India,54.0,56.0,BMIL-1372,2026-09-05,2027-01-10 16:12:15,191,24,SAFE
+DISC-PARLEG-001,Parle-G Gold Biscuits 1kg,Biscuits,Parle Products,120.0,130.0,BPAR-1178,2026-07-22,2026-12-29,336,22,SAFE
+PICKLE-MIXED-004,Nilon's Mixed Vegetable Pickle 500g,Pickles,Desai Foods (Mother's Recipe),130.0,140.0,BMIX-1064,2026-08-25,2027-01-17,34,17,SAFE
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1054,2026-02-08,2026-09-30,190,8,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1068,2026-02-12,2026-09-23 15:47:01,150,3,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1003,2025-10-28,2026-10-11,302,8,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1341,2026-01-28,2027-01-03,193,19,SAFE
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1086,2026-05-25,2027-01-11,281,17,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1532,2026-03-30,2026-08-26 02:41:43,275,2,EXPIRED
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1525,2026-04-02,2026-08-14,74,16,EXPIRED
+BAKERY-PASTRY-004,Monginis Choco Lava Cake 75g,Bakery,Britannia Industries,40.0,45.0,BPAS-1172,2026-02-26,2026-11-19,168,22,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1314,2025-12-03,2026-10-01,119,12,SAFE
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1364,2026-01-07,2026-11-25,325,13,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1023,2026-06-04,2027-02-01,274,21,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1261,2026-08-13,2027-01-20,41,22,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1043,2026-08-13,2026-12-12,44,3,SAFE
+FROZEN-NUGGETS-004,Sumeru Crispy Chicken Nuggets 500g,Frozen Foods,McCain Foods,240.0,260.0,BNUG-1236,2026-05-22,2026-11-03 10:10:46,89,10,SAFE
+SNACK-NUTS-005,Nutraj Salted Roasted Almonds 200g,Snacks,PepsiCo India,280.0,300.0,BNUT-1313,2026-03-29,2027-01-20 20:34:17,52,24,SAFE
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1061,2026-04-11,2027-02-03,94,9,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1389,2026-09-24,2027-01-21,228,19,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1502,2025-12-24,2026-08-27 15:52:28,134,15,DONATION
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1495,2025-09-18,2026-08-27 19:44:23,152,12,DONATION
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1037,2026-04-12,2026-10-16,86,15,SAFE
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1410,2026-05-04,2026-12-03 09:18:53,284,10,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1027,2026-02-22,2027-02-19,80,23,SAFE
+SPICE-CHILLI-002,MDH Deggi Mirch Powder 100g,Spices,MDH Spices,95.0,100.0,BCHI-1145,2026-11-02,2027-01-31,292,16,SAFE
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1335,2026-09-21,2027-02-14 16:10:01,240,12,SAFE
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1469,2026-02-24,2026-08-28 12:41:47,264,22,CRITICAL
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1157,2026-04-05,2027-01-13,179,8,SAFE
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1431,2025-11-21,2026-09-01 02:26:13,152,11,WARNING
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1324,2026-05-06,2026-11-11,162,4,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1267,2026-02-03,2026-09-27,256,24,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1293,2026-07-13,2026-11-19,286,13,SAFE
+SNACK-BHUJIA-003,Haldiram's Nagpur Alooo Bhujia 400g,Snacks,PepsiCo India,120.0,130.0,BBHU-1009,2026-09-07,2027-01-15,66,14,SAFE
+SPICE-CHILLI-002,MDH Deggi Mirch Powder 100g,Spices,MDH Spices,95.0,100.0,BCHI-1522,2025-08-15,2026-08-14,93,10,EXPIRED
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1198,2026-10-19,2027-01-18 01:59:13,89,6,SAFE
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1218,2026-01-25,2026-09-08 06:04:08,154,24,SAFE
+DAIRY-PANEER-003,Mother Dairy Fresh Paneer 200g,Dairy,Amul India,90.0,95.0,BPAN-1101,2026-05-22,2026-12-20 03:39:30,73,20,SAFE
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1147,2026-07-03,2027-01-13 03:04:34,82,11,SAFE
+JUICE-APPLE-004,Real Fruit Power Himalayan Apple Juice 1L,Juices,Dabur India,115.0,125.0,BAPP-1247,2026-06-15,2026-12-03,159,14,SAFE
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1180,2026-01-21,2026-09-19,227,7,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1243,2026-01-04,2026-12-19,312,19,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1286,2026-03-19,2026-09-17,179,5,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1273,2025-12-07,2026-09-03 23:36:27,228,7,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1046,2026-07-12,2027-02-13,35,21,SAFE
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1033,2025-11-17,2026-10-21 20:47:46,82,25,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1277,2026-06-12,2026-11-02,185,6,SAFE
+FROZEN-NUGGETS-004,Sumeru Crispy Chicken Nuggets 500g,Frozen Foods,McCain Foods,240.0,260.0,BNUG-1343,2026-09-04,2027-02-15 18:44:32,162,24,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1188,2026-01-31,2026-12-24,169,22,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1079,2026-06-08,2026-09-29 04:38:04,258,21,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1194,2026-03-08,2026-12-06 20:38:56,156,8,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1260,2026-04-04,2027-01-14,229,7,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1115,2026-04-28,2026-11-27,345,24,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1441,2026-02-18,2026-09-03,164,28,WARNING
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1296,2026-06-18,2027-01-03,161,24,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1451,2026-04-17,2026-08-28 09:20:31,74,28,CRITICAL
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1250,2026-04-08,2026-09-17,173,22,SAFE
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1224,2026-04-28,2026-11-14,73,13,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1458,2025-11-04,2026-08-28 06:55:33,337,7,CRITICAL
+CER-MUESLI-003,Baggry's Crunchy Muesli Fruit & Nut 400g,Cereals,Kellogg India,270.0,290.0,BMUE-1482,2026-04-16,2026-08-28 08:06:09,239,5,CRITICAL
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1280,2026-03-01,2026-09-10 02:35:53,117,3,SAFE
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1539,2025-12-22,2026-08-18,170,25,EXPIRED
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1173,2026-02-12,2027-01-01,116,14,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1351,2026-08-07,2027-02-03,33,28,SAFE
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1530,2025-09-12,2026-08-22,199,3,EXPIRED
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1192,2026-04-30,2026-12-19 04:04:20,204,8,SAFE
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1038,2026-03-18,2026-10-21,53,16,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1187,2026-02-01,2026-12-29 09:41:14,302,12,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1288,2025-11-19,2026-10-02,36,25,SAFE
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1057,2025-11-19,2026-10-01,233,19,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1302,2025-11-26,2026-09-15,260,18,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1445,2025-12-01,2026-09-01,289,21,WARNING
+FROZEN-MOMOS-003,Prasuma Chicken Veg Momos 24pcs,Frozen Foods,McCain Foods,290.0,320.0,BMOM-1402,2025-11-12,2026-10-18,343,25,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1031,2026-04-08,2026-11-01,18,4,SAFE
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1166,2026-08-25,2027-01-13,168,2,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1312,2026-04-04,2026-11-28,169,17,SAFE
+CANNED-CORN-001,Del Monte Whole Kernel Sweet Corn 400g,Canned Foods,Del Monte India,85.0,95.0,BCOR-1175,2025-11-19,2026-09-07 12:09:53,304,23,SAFE
+SAUCE-KETCHUP-001,Kissan Fresh Tomato Ketchup 950g,Sauces,Hindustan Unilever,135.0,150.0,BKET-1457,2025-12-12,2026-08-28 19:05:17,301,15,CRITICAL
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1483,2025-12-02,2026-08-28 06:05:27,327,22,CRITICAL
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1467,2026-04-01,2026-08-28 07:10:52,108,13,CRITICAL
+BEV-COFFEE-004,Nescafe Classic Instant Coffee 100g,Beverages,Dabur India,310.0,325.0,BCOF-1001,2026-01-21,2026-09-08 00:54:36,86,25,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1245,2026-04-02,2027-02-16 07:39:48,190,24,SAFE
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1353,2026-06-03,2026-10-25,186,11,SAFE
+DISC-FANTASY-003,Sunfeast Dark Fantasy Choco Fills 300g,Biscuits,Parle Products,160.0,175.0,BFAN-1011,2026-08-30,2027-01-03,102,19,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1317,2025-11-08,2026-09-24 21:34:53,64,3,SAFE
+INST-POHA-005,Saffola FITTIFY Instant Gourmet Poha 80g,Instant Foods,Nestle India,40.0,45.0,BPOH-1325,2026-04-10,2026-11-29,334,23,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1370,2025-12-04,2026-11-21,303,3,SAFE
+CER-MUESLI-003,Baggry's Crunchy Muesli Fruit & Nut 400g,Cereals,Kellogg India,270.0,290.0,BMUE-1444,2025-10-03,2026-09-03,288,18,WARNING
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1020,2026-08-31,2026-12-04,73,23,SAFE
+SNACK-NUTS-005,Nutraj Salted Roasted Almonds 200g,Snacks,PepsiCo India,280.0,300.0,BNUT-1540,2025-09-12,2026-08-20,115,25,EXPIRED
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1433,2026-04-24,2026-08-31,141,25,WARNING
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1159,2026-03-31,2027-01-10,348,6,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1278,2026-02-13,2026-11-03,104,28,SAFE
+INST-SOUP-002,Knorr Thick Tomato Soup 53g,Instant Foods,Nestle India,50.0,55.0,BSOU-1253,2026-01-01,2026-09-06 20:46:20,124,12,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1097,2026-02-24,2026-10-05,123,16,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1307,2025-11-12,2026-11-02,55,10,SAFE
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1073,2026-02-04,2026-11-30,166,19,SAFE
+INST-MAGGI-001,Nestle Maggi 2-Minute Masala Noodles 560g,Instant Foods,Nestle India,110.0,120.0,BMAG-1289,2026-02-10,2026-12-19 00:44:57,44,4,SAFE
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1506,2026-02-01,2026-08-27 18:00:14,211,4,DONATION
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1181,2025-12-23,2026-09-26,154,28,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1015,2025-10-30,2026-10-10,344,16,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1303,2026-09-09,2027-01-14 17:08:54,177,22,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1511,2025-10-14,2026-08-26,59,5,EXPIRED
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1488,2026-01-08,2026-08-27 20:12:33,350,6,DONATION
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1507,2025-11-22,2026-08-27 16:07:53,168,6,DONATION
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1500,2025-12-26,2026-08-27 20:01:34,96,10,DONATION
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1091,2026-11-06,2027-02-14,309,14,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1380,2026-05-12,2026-10-06 07:18:34,229,21,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1379,2026-04-15,2026-11-08 07:06:46,192,6,SAFE
+FROZEN-MOMOS-003,Prasuma Chicken Veg Momos 24pcs,Frozen Foods,McCain Foods,290.0,320.0,BMOM-1339,2026-04-26,2026-12-07,113,9,SAFE
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1295,2026-02-14,2026-11-29,75,10,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1333,2026-03-27,2026-10-19,313,17,SAFE
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1029,2026-08-03,2027-02-11,219,23,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1274,2026-03-04,2026-12-03 05:34:35,284,19,SAFE
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1512,2025-11-11,2026-08-24,234,12,EXPIRED
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1124,2026-01-16,2026-12-23 00:16:28,21,20,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1127,2026-01-27,2026-09-29 22:46:57,142,5,SAFE
+COND-MUSTARD-002,French's Classic Yellow Mustard 226g,Condiments,Wingreens Farms,210.0,230.0,BMUS-1052,2026-01-08,2027-01-03 08:48:22,298,11,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1082,2025-10-21,2026-10-11,300,9,SAFE
+SAUCE-CHILLI-005,Heinz Sweet Chilli Sauce 300g,Sauces,Hindustan Unilever,160.0,175.0,BCHI-1485,2025-12-03,2026-08-29 04:43:20,287,10,CRITICAL
+DISC-FANTASY-003,Sunfeast Dark Fantasy Choco Fills 300g,Biscuits,Parle Products,160.0,175.0,BFAN-1479,2025-11-25,2026-08-29 03:34:11,292,28,CRITICAL
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1461,2026-04-28,2026-08-28 05:56:07,310,5,CRITICAL
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1272,2025-09-18,2026-09-06,88,11,SAFE
+CER-MUESLI-003,Baggry's Crunchy Muesli Fruit & Nut 400g,Cereals,Kellogg India,270.0,290.0,BMUE-1242,2025-12-06,2026-09-10,54,22,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1030,2025-11-29,2026-11-18,141,9,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1492,2025-11-22,2026-08-27 19:05:20,247,17,DONATION
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1448,2026-04-12,2026-08-30 04:46:10,276,25,WARNING
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1113,2026-03-01,2026-11-27,189,10,SAFE
+BEV-DRINK-005,Paper Boat Aamras Juice 250ml,Beverages,Dabur India,35.0,40.0,BDRI-1306,2026-04-01,2026-12-02 07:14:21,180,24,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1164,2026-01-16,2026-12-21,33,21,SAFE
+DAIRY-CHEESE-005,Britannia Processed Cheese Slices 200g,Dairy,Amul India,140.0,145.0,BCHE-1014,2026-03-31,2027-01-20 22:03:20,123,20,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1093,2026-05-17,2026-12-05,154,15,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1139,2026-06-11,2026-09-19,152,20,SAFE
+COND-MUSTARD-002,French's Classic Yellow Mustard 226g,Condiments,Wingreens Farms,210.0,230.0,BMUS-1199,2026-04-21,2026-10-17 01:19:49,28,6,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1165,2026-02-19,2026-10-14,61,15,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1258,2026-02-26,2027-01-11 19:32:20,137,11,SAFE
+SPICE-CHILLI-002,MDH Deggi Mirch Powder 100g,Spices,MDH Spices,95.0,100.0,BCHI-1290,2026-05-18,2026-11-05,88,21,SAFE
+SNACK-BHUJIA-003,Haldiram's Nagpur Alooo Bhujia 400g,Snacks,PepsiCo India,120.0,130.0,BBHU-1177,2026-03-22,2026-12-17 16:26:07,112,21,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1249,2026-01-16,2026-10-30 17:19:55,323,6,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1516,2026-01-24,2026-08-24,72,9,EXPIRED
+CANNED-BEANS-003,Heinz Baked Beans in Tomato Sauce 415g,Canned Foods,Del Monte India,140.0,150.0,BBEA-1362,2025-10-19,2026-10-01,174,24,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1468,2025-10-28,2026-08-28 17:31:36,320,6,CRITICAL
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1383,2026-09-16,2027-01-12 03:48:58,163,9,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1533,2026-05-21,2026-08-25 14:46:35,256,13,EXPIRED
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1279,2026-03-22,2027-02-20,84,4,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1409,2025-10-31,2026-09-06,106,5,SAFE
+INST-UPMA-004,MTR Instant Vegetable Upma Mix 160g,Instant Foods,Nestle India,45.0,50.0,BUPM-1491,2026-04-12,2026-08-27 17:52:31,221,18,DONATION
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1270,2026-01-28,2026-09-22 22:32:27,77,3,SAFE
+PICKLE-MIXED-004,Nilon's Mixed Vegetable Pickle 500g,Pickles,Desai Foods (Mother's Recipe),130.0,140.0,BMIX-1330,2026-03-12,2026-11-10,274,28,SAFE
+BEV-COFFEE-004,Nescafe Classic Instant Coffee 100g,Beverages,Dabur India,310.0,325.0,BCOF-1103,2026-07-27,2027-01-16,70,20,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1215,2026-06-14,2027-02-18,310,18,SAFE
+JUICE-ORANGE-003,Minute Maid Pulpy Orange Drink 1L,Juices,Dabur India,90.0,99.0,BORA-1071,2026-02-10,2027-02-10,115,13,SAFE
+RTE-PANEER-001,MTR Ready to Eat Paneer Butter Masala 300g,Ready-to-eat foods,MTR Foods,140.0,150.0,BPAN-1197,2026-03-27,2026-10-09,134,12,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1375,2026-01-26,2026-11-07,208,14,SAFE
+PKG-RICE-002,Fortune Biryani Special Basmati Rice 1kg,Packaged Foods,Tata Consumer Products,195.0,210.0,BRIC-1519,2026-04-21,2026-08-26 22:51:26,49,2,EXPIRED
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1417,2026-05-19,2026-09-02 20:02:23,176,2,WARNING
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1246,2026-06-04,2026-11-29 22:59:38,239,16,SAFE
+CANNED-BEANS-003,Heinz Baked Beans in Tomato Sauce 415g,Canned Foods,Del Monte India,140.0,150.0,BBEA-1427,2026-01-15,2026-08-31 18:02:11,59,7,WARNING
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1527,2025-11-21,2026-08-15,147,7,EXPIRED
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1256,2026-06-30,2026-12-15 23:41:17,334,27,SAFE
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1152,2026-07-21,2027-02-20,89,14,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1332,2026-03-01,2026-12-29,337,2,SAFE
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1126,2026-05-23,2026-09-23,52,20,SAFE
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1316,2026-01-25,2027-01-13,178,9,SAFE
+CANNED-CORN-001,Del Monte Whole Kernel Sweet Corn 400g,Canned Foods,Del Monte India,85.0,95.0,BCOR-1318,2026-04-16,2027-02-14 04:27:46,96,28,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1529,2025-10-13,2026-08-18 07:20:39,47,10,EXPIRED
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1018,2026-05-28,2026-09-19,93,22,SAFE
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1077,2026-06-08,2026-12-01,160,18,SAFE
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1229,2026-04-29,2027-01-25 19:32:07,36,15,SAFE
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1144,2026-04-28,2026-09-10,180,5,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1141,2025-11-26,2026-10-05,266,4,SAFE
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1520,2026-04-18,2026-08-16,218,18,EXPIRED
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1110,2026-02-21,2027-01-15,318,10,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1182,2025-11-16,2026-10-18,166,25,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1089,2026-09-03,2027-01-03,184,19,SAFE
+CANNED-BEANS-003,Heinz Baked Beans in Tomato Sauce 415g,Canned Foods,Del Monte India,140.0,150.0,BBEA-1219,2026-05-17,2027-02-10 01:29:46,88,20,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1350,2026-05-31,2026-12-25,34,7,SAFE
+DAIRY-PANEER-003,Mother Dairy Fresh Paneer 200g,Dairy,Amul India,90.0,95.0,BPAN-1196,2025-12-26,2026-09-12 11:00:59,79,27,SAFE
+DISC-FANTASY-003,Sunfeast Dark Fantasy Choco Fills 300g,Biscuits,Parle Products,160.0,175.0,BFAN-1432,2026-05-01,2026-08-31 23:21:33,156,15,WARNING
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1255,2025-12-06,2026-11-30 12:01:40,187,26,SAFE
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1440,2026-03-05,2026-09-03,296,2,WARNING
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1371,2026-03-20,2026-11-22,217,10,SAFE
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1222,2026-09-05,2027-01-16,94,7,SAFE
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1294,2026-03-10,2026-10-28 01:48:54,73,2,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1514,2026-05-13,2026-08-24,169,8,EXPIRED
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1438,2025-09-24,2026-08-31,139,12,WARNING
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1454,2025-10-12,2026-08-29 01:33:04,178,4,CRITICAL
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1022,2026-01-23,2026-09-04,106,18,SAFE
+RTE-PANEER-001,MTR Ready to Eat Paneer Butter Masala 300g,Ready-to-eat foods,MTR Foods,140.0,150.0,BPAN-1419,2025-11-14,2026-08-30,291,12,WARNING
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1170,2025-11-06,2026-09-28,250,10,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1048,2025-12-26,2026-10-14 23:39:44,345,11,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1066,2026-03-07,2026-12-26,50,26,SAFE
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1228,2025-12-24,2026-10-04,132,18,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1408,2026-09-03,2026-12-08 02:26:10,155,19,SAFE
+DAIRY-CHEESE-005,Britannia Processed Cheese Slices 200g,Dairy,Amul India,140.0,145.0,BCHE-1413,2025-11-19,2026-08-30,258,3,WARNING
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1034,2026-05-12,2026-12-12,223,8,SAFE
+SNACK-NUTS-005,Nutraj Salted Roasted Almonds 200g,Snacks,PepsiCo India,280.0,300.0,BNUT-1012,2025-12-21,2026-10-01 23:14:09,342,24,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1484,2026-03-20,2026-08-28 04:25:22,120,28,CRITICAL
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1133,2026-02-15,2027-01-03 06:30:50,134,10,SAFE
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1301,2025-12-04,2026-09-08,297,6,SAFE
+COND-MUSTARD-002,French's Classic Yellow Mustard 226g,Condiments,Wingreens Farms,210.0,230.0,BMUS-1299,2026-02-22,2026-10-23,341,7,SAFE
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1044,2025-11-29,2026-11-25 03:47:16,275,4,SAFE
+JUICE-COCO-002,RAW Pressery 100% Tender Coconut Water 200ml,Juices,Dabur India,60.0,65.0,BCOC-1331,2026-04-05,2026-12-04,23,13,SAFE
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1323,2026-02-13,2026-09-26,221,13,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1456,2026-03-07,2026-08-28 23:50:48,139,18,CRITICAL
+COND-MUSTARD-002,French's Classic Yellow Mustard 226g,Condiments,Wingreens Farms,210.0,230.0,BMUS-1191,2026-05-30,2026-11-15,350,5,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1206,2026-05-17,2026-10-29 09:52:46,155,21,SAFE
+SNACK-CHIPS-001,Lay's India's Magic Masala Chips 50g,Snacks,PepsiCo India,20.0,20.0,BCHI-1102,2026-04-16,2026-11-23,100,21,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1501,2026-01-21,2026-08-27 18:53:18,57,13,DONATION
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1114,2025-12-19,2026-12-08,58,9,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1481,2026-01-24,2026-08-28 02:00:26,167,3,CRITICAL
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1505,2025-12-05,2026-08-27 15:39:43,76,15,DONATION
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1538,2025-12-18,2026-08-24,298,16,EXPIRED
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1063,2026-03-23,2027-01-17,142,10,SAFE
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1072,2025-12-30,2026-09-15,78,25,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1407,2026-01-16,2026-12-19,23,2,SAFE
+RTE-PANEER-001,MTR Ready to Eat Paneer Butter Masala 300g,Ready-to-eat foods,MTR Foods,140.0,150.0,BPAN-1412,2026-02-06,2026-08-30 19:52:06,56,22,WARNING
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1053,2026-09-08,2027-02-13 01:40:30,69,25,SAFE
+SAUCE-SOYA-004,Tops Dark Soy Sauce 210ml,Sauces,Hindustan Unilever,55.0,60.0,BSOY-1237,2026-04-18,2026-10-03,350,4,SAFE
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1049,2026-06-23,2026-10-28 09:15:03,333,20,SAFE
+BAKERY-BUN-003,English Oven Burger Buns 4pcs,Bakery,Britannia Industries,35.0,38.0,BBUN-1442,2025-11-07,2026-09-02,86,22,WARNING
+DISC-PARLEG-001,Parle-G Gold Biscuits 1kg,Biscuits,Parle Products,120.0,130.0,BPAR-1282,2026-03-07,2026-09-10 01:05:30,39,22,SAFE
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1384,2026-02-16,2026-10-28 20:33:57,88,23,SAFE
+PKG-SALT-005,Tata Vacuum Evaporated Iodized Salt 1kg,Packaged Foods,Tata Consumer Products,25.0,28.0,BSAL-1285,2025-11-16,2026-11-06 05:36:19,57,25,SAFE
+FROZEN-NUGGETS-004,Sumeru Crispy Chicken Nuggets 500g,Frozen Foods,McCain Foods,240.0,260.0,BNUG-1465,2025-10-08,2026-08-28 11:29:27,331,7,CRITICAL
+CANNED-CORN-001,Del Monte Whole Kernel Sweet Corn 400g,Canned Foods,Del Monte India,85.0,95.0,BCOR-1208,2026-01-15,2026-11-21 04:02:04,73,22,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1016,2026-03-17,2026-10-19,290,10,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1090,2026-05-03,2026-11-14,214,26,SAFE
+PICKLE-CHILLI-005,Bedekar Green Chilli Pickle 300g,Pickles,Desai Foods (Mother's Recipe),85.0,95.0,BCHI-1510,2026-02-09,2026-08-27 17:48:57,336,25,DONATION
+CER-CHOCOS-004,Kellogg's Chocos Crunchy Bites 375g,Cereals,Kellogg India,195.0,210.0,BCHO-1498,2026-03-10,2026-08-27 15:41:49,240,16,DONATION
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1154,2026-03-19,2027-01-15,274,10,SAFE
+SNACK-BHUJIA-003,Haldiram's Nagpur Alooo Bhujia 400g,Snacks,PepsiCo India,120.0,130.0,BBHU-1347,2025-11-15,2026-09-12,256,5,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1026,2026-06-07,2026-10-15 08:43:57,263,28,SAFE
+DISC-UNIBIC-005,Unibic Chocolate Chip Cookies 150g,Biscuits,Parle Products,65.0,75.0,BUNI-1263,2026-03-30,2026-09-18 05:11:50,277,6,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1203,2026-10-25,2027-02-14,281,11,SAFE
+FROZEN-MOMOS-003,Prasuma Chicken Veg Momos 24pcs,Frozen Foods,McCain Foods,290.0,320.0,BMOM-1183,2026-02-25,2027-01-20,87,26,SAFE
+COND-SRIRACHA-004,Huy Fong Sriracha Hot Chili Sauce 255g,Condiments,Wingreens Farms,320.0,350.0,BSRI-1128,2026-06-22,2027-01-13,209,16,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1365,2026-02-06,2027-01-03,126,26,SAFE
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1459,2025-10-21,2026-08-28 22:27:13,217,2,CRITICAL
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1076,2026-04-07,2026-12-17,241,23,SAFE
+BEV-SODA-006,Coca-Cola Original Taste 1.25L,Beverages,Dabur India,60.0,65.0,BSOD-1489,2025-12-16,2026-08-27 16:51:50,141,26,DONATION
+INST-UPMA-004,MTR Instant Vegetable Upma Mix 160g,Instant Foods,Nestle India,45.0,50.0,BUPM-1439,2025-11-12,2026-08-30,303,8,WARNING
+CER-CORN-001,Kellogg's Corn Flakes Original 875g,Cereals,Kellogg India,310.0,330.0,BCOR-1428,2025-09-13,2026-08-31,28,4,WARNING
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1111,2026-09-16,2027-01-28 23:43:30,245,9,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1021,2026-04-22,2027-01-11 13:15:30,237,7,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1309,2026-03-27,2026-09-19,312,6,SAFE
+SAUCE-MAYO-003,Veeba Eggless Mayonnaise 250g,Sauces,Hindustan Unilever,75.0,85.0,BMAY-1357,2025-12-11,2026-10-04,278,12,SAFE
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1361,2026-05-29,2026-12-25 17:54:05,75,16,SAFE
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1424,2025-11-21,2026-09-01 19:52:55,331,11,WARNING
+PKG-OIL-004,Fortune Kachi Ghani Mustard Oil 1L,Packaged Foods,Tata Consumer Products,155.0,165.0,BOIL-1156,2026-03-19,2027-01-31,191,12,SAFE
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1352,2026-07-16,2027-01-17,163,3,SAFE
+DAIRY-BUTTER-002,Amul Pasteurised Butter 500g,Dairy,Amul India,270.0,275.0,BBUT-1414,2026-04-22,2026-09-01,237,22,WARNING
+SPICE-CHILLI-002,MDH Deggi Mirch Powder 100g,Spices,MDH Spices,95.0,100.0,BCHI-1081,2026-07-15,2026-10-15,69,26,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1047,2025-11-23,2026-11-15,148,8,SAFE
+JUICE-ORANGE-003,Minute Maid Pulpy Orange Drink 1L,Juices,Dabur India,90.0,99.0,BORA-1515,2026-02-17,2026-08-22,166,22,EXPIRED
+PICKLE-MANGO-001,Mother's Recipe Mango Pickle 500g,Pickles,Desai Foods (Mother's Recipe),145.0,160.0,BMAN-1437,2026-02-20,2026-08-31,105,14,WARNING
+CANNED-BEANS-003,Heinz Baked Beans in Tomato Sauce 415g,Canned Foods,Del Monte India,140.0,150.0,BBEA-1136,2026-04-22,2026-12-15,254,24,SAFE
+CANNED-MUSHROOM-004,Urban Platter Button Mushrooms 400g,Canned Foods,Del Monte India,110.0,120.0,BMUS-1518,2025-10-14,2026-08-15,103,26,EXPIRED
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1158,2026-05-16,2026-12-11,225,3,SAFE
+DISC-FANTASY-003,Sunfeast Dark Fantasy Choco Fills 300g,Biscuits,Parle Products,160.0,175.0,BFAN-1487,2025-09-08,2026-08-27 20:22:39,63,6,DONATION
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1528,2025-12-31,2026-08-15,75,26,EXPIRED
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1480,2025-10-18,2026-08-29 02:59:44,294,8,CRITICAL
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1184,2026-04-12,2027-01-30,300,13,SAFE
+JUICE-GUAVA-001,B-Natural Pink Guava Juice 1L,Juices,Dabur India,105.0,115.0,BGUA-1275,2026-02-02,2027-01-17,214,17,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1523,2025-08-31,2026-08-17,94,19,EXPIRED
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1209,2026-06-20,2027-01-06,131,15,SAFE
+BEV-JUICE-002,Tropicana 100% Orange Juice 1L,Beverages,Dabur India,130.0,140.0,BJUI-1161,2026-03-23,2027-02-01 21:00:20,248,2,SAFE
+SPICE-CORI-004,Tata Sampann Coriander Powder 200g,Spices,MDH Spices,70.0,75.0,BCOR-1535,2026-01-11,2026-08-16,178,10,EXPIRED
+RTE-DAL-002,Kitchens of India Dal Makhani 285g,Ready-to-eat foods,MTR Foods,150.0,165.0,BDAL-1231,2026-01-13,2026-11-12 15:28:13,222,2,SAFE
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1085,2026-06-01,2026-11-19,258,16,SAFE
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1055,2026-04-26,2026-11-30,41,4,SAFE
+BAKERY-PASTRY-004,Monginis Choco Lava Cake 75g,Bakery,Britannia Industries,40.0,45.0,BPAS-1080,2026-05-16,2026-11-21,211,17,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1056,2026-10-05,2027-01-25 02:54:36,81,22,SAFE
+INST-SOUP-002,Knorr Thick Tomato Soup 53g,Instant Foods,Nestle India,50.0,55.0,BSOU-1300,2026-07-01,2026-11-30,86,9,SAFE
+PKG-ATTA-003,Aashirvaad Shuddh Chakki Atta 5kg,Packaged Foods,Tata Consumer Products,240.0,260.0,BATT-1395,2026-07-29,2027-02-08,137,19,SAFE
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1400,2026-04-15,2027-02-12 08:21:44,115,12,SAFE
+JUICE-COCO-002,RAW Pressery 100% Tender Coconut Water 200ml,Juices,Dabur India,60.0,65.0,BCOC-1070,2026-03-20,2026-09-23 17:02:44,238,2,SAFE
+DAIRY-YOGURT-004,Epigamia Greek Yogurt Mango 85g,Dairy,Amul India,50.0,55.0,BYOG-1104,2026-05-05,2027-02-11,116,4,SAFE
+INST-UPMA-004,MTR Instant Vegetable Upma Mix 160g,Instant Foods,Nestle India,45.0,50.0,BUPM-1508,2026-03-22,2026-08-27 19:28:58,343,23,DONATION
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1120,2026-08-15,2027-02-15 03:15:26,262,10,SAFE
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1140,2026-07-18,2027-01-13,348,16,SAFE
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1232,2025-11-12,2026-10-03,200,4,SAFE
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1163,2026-04-11,2026-12-25,288,14,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1168,2025-12-19,2026-10-15,107,7,SAFE
+SAUCE-KETCHUP-001,Kissan Fresh Tomato Ketchup 950g,Sauces,Hindustan Unilever,135.0,150.0,BKET-1377,2026-05-07,2027-02-22,129,28,SAFE
+PICKLE-LIME-003,Tops Spicy Lime Pickle 400g,Pickles,Desai Foods (Mother's Recipe),95.0,105.0,BLIM-1426,2025-12-24,2026-09-02,61,2,WARNING
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1359,2026-11-11,2027-02-12 12:47:27,135,16,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1509,2026-05-25,2026-08-27 15:57:27,327,22,DONATION
+INST-MAGGI-001,Nestle Maggi 2-Minute Masala Noodles 560g,Instant Foods,Nestle India,110.0,120.0,BMAG-1411,2025-11-10,2026-08-30 22:31:16,222,16,WARNING
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1475,2026-04-18,2026-08-28 16:41:10,304,2,CRITICAL
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1162,2026-05-28,2026-11-13 14:31:36,150,12,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1436,2025-10-25,2026-08-31,348,21,WARNING
+RTE-BIRYAN-004,Tata Q Spicy Chicken Biryani 330g,Ready-to-eat foods,MTR Foods,185.0,199.0,BBIR-1134,2026-06-19,2026-12-27,293,9,SAFE
+BEV-JUICE-001,Real Fruit Power Mango Juice 1L,Beverages,Dabur India,110.0,120.0,BJUI-1150,2026-05-17,2026-10-12,75,22,SAFE
+SAUCE-MAYO-003,Veeba Eggless Mayonnaise 250g,Sauces,Hindustan Unilever,75.0,85.0,BMAY-1122,2026-01-23,2026-10-24 22:32:18,22,24,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1067,2025-11-18,2026-11-03,289,12,SAFE
+INST-MAGGI-001,Nestle Maggi 2-Minute Masala Noodles 560g,Instant Foods,Nestle India,110.0,120.0,BMAG-1494,2025-08-29,2026-08-27 19:51:57,218,8,DONATION
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1340,2026-05-18,2026-12-09,167,26,SAFE
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1223,2026-05-14,2026-12-29,232,17,SAFE
+BAKERY-BREAD-002,Harvest Gold White Bread 400g,Bakery,Britannia Industries,40.0,42.0,BBRE-1032,2026-06-29,2026-10-13,51,18,SAFE
+CER-OATS-002,Quaker Rolled Oats 1kg,Cereals,Kellogg India,180.0,195.0,BOAT-1291,2026-05-08,2026-09-09 17:31:52,345,13,SAFE
+BAKERY-PASTRY-004,Monginis Choco Lava Cake 75g,Bakery,Britannia Industries,40.0,45.0,BPAS-1304,2025-12-01,2026-11-20,297,22,SAFE
+COND-DIP-003,Wingreens Farms Chipotle Dip 180g,Condiments,Wingreens Farms,175.0,190.0,BDIP-1039,2026-06-15,2026-09-20,136,7,SAFE
+CER-MUESLI-003,Baggry's Crunchy Muesli Fruit & Nut 400g,Cereals,Kellogg India,270.0,290.0,BMUE-1202,2026-01-29,2027-01-16,246,18,SAFE
+SNACK-KURKURE-002,Kurkure Masala Munch 85g,Snacks,PepsiCo India,20.0,20.0,BKUR-1537,2026-05-03,2026-08-24,50,16,EXPIRED
+INST-SOUP-002,Knorr Thick Tomato Soup 53g,Instant Foods,Nestle India,50.0,55.0,BSOU-1327,2026-07-05,2027-01-12,220,18,SAFE
+CANNED-PINE-002,Golden Crown Pineapple Slices in Syrup 850g,Canned Foods,Del Monte India,180.0,200.0,BPIN-1137,2026-05-18,2027-01-02,267,16,SAFE
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1098,2026-01-21,2026-11-01 01:44:34,230,10,SAFE
+SNACK-NACHOS-004,Doritos Cheese Nachos 60g,Snacks,PepsiCo India,30.0,30.0,BNAC-1087,2026-06-14,2026-10-21,135,10,SAFE
+COND-TABASCO-001,Tabasco Original Red Pepper Sauce 60ml,Condiments,Wingreens Farms,220.0,240.0,BTAB-1470,2026-03-04,2026-08-29 00:27:57,299,7,CRITICAL
+BAKERY-BREAD-001,Britannia 100% Whole Wheat Bread 400g,Bakery,Britannia Industries,45.0,50.0,BBRE-1382,2026-06-26,2026-10-16,134,19,SAFE
+CER-MUESLI-003,Baggry's Crunchy Muesli Fruit & Nut 400g,Cereals,Kellogg India,270.0,290.0,BMUE-1423,2025-12-02,2026-08-31,207,15,WARNING
+SAUCE-KETCHUP-001,Kissan Fresh Tomato Ketchup 950g,Sauces,Hindustan Unilever,135.0,150.0,BKET-1238,2026-03-10,2027-02-15,303,26,SAFE
+SAUCE-SCHZ-002,Ching's Secret Schezwan Chutney 250g,Sauces,Hindustan Unilever,80.0,85.0,BSCH-1045,2026-05-14,2026-09-15,135,14,SAFE
+SPICE-GARAM-001,Everest Royal Garam Masala 100g,Spices,MDH Spices,85.0,90.0,BGAR-1096,2026-09-03,2026-12-15 01:28:14,234,6,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1287,2026-03-03,2026-10-30,323,24,SAFE
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1146,2025-09-23,2026-09-13,270,22,SAFE
+PICKLE-MIXED-004,Nilon's Mixed Vegetable Pickle 500g,Pickles,Desai Foods (Mother's Recipe),130.0,140.0,BMIX-1062,2026-08-23,2027-02-19,27,7,SAFE
+BAKERY-PASTRY-004,Monginis Choco Lava Cake 75g,Bakery,Britannia Industries,40.0,45.0,BPAS-1504,2026-02-03,2026-08-27 16:16:44,280,23,DONATION
+SPICE-TURM-003,Catch Pure Turmeric Powder 200g,Spices,MDH Spices,65.0,70.0,BTUR-1430,2026-04-20,2026-08-31,301,9,WARNING
+DAIRY-CURD-006,Nandini Premium Curd 500g,Dairy,Amul India,35.0,38.0,BCUR-1244,2026-05-18,2026-11-20,258,18,SAFE
+SPICE-PEPPER-005,Keya Black Pepper Grinder 50g,Spices,MDH Spices,160.0,175.0,BPEP-1211,2026-03-21,2026-10-27,93,23,SAFE
+INST-PASTA-003,Maggi Pazzta Cheese Macaroni 70g,Instant Foods,Nestle India,30.0,35.0,BPAS-1107,2025-12-25,2026-09-15 15:17:09,230,28,SAFE
+PICKLE-GARLIC-002,Priya Garlic Pickle in Sesame Oil 300g,Pickles,Desai Foods (Mother's Recipe),110.0,125.0,BGAR-1315,2026-02-16,2026-10-27,191,14,SAFE
+SAUCE-KETCHUP-001,Kissan Fresh Tomato Ketchup 950g,Sauces,Hindustan Unilever,135.0,150.0,BKET-1386,2026-02-15,2026-12-20,39,13,SAFE
+BEV-TEA-003,Tata Tea Gold 500g,Beverages,Dabur India,320.0,340.0,BTEA-1002,2026-08-17,2026-12-29,31,2,SAFE
+BAKERY-RUSK-005,Parle Premium Elaichi Rusk 300g,Bakery,Britannia Industries,55.0,60.0,BRUS-1344,2025-12-21,2026-11-02,260,8,SAFE
+DISC-OREO-004,Oreo Chocolate Cream Biscuits 120g,Biscuits,Parle Products,35.0,40.0,BORE-1010,2026-02-18,2026-11-21 02:46:06,196,8,SAFE
+PKG-DAL-001,Tata Sampann Unpolished Arhar Dal 1kg,Packaged Foods,Tata Consumer Products,165.0,175.0,BDAL-1355,2026-05-26,2026-10-20,249,22,SAFE
+RTE-RAJMA-003,Haldiram's Minute Khana Rajma Chawal 375g,Ready-to-eat foods,MTR Foods,125.0,135.0,BRAJ-1239,2026-03-10,2026-11-20,336,12,SAFE
+FROZEN-FRIES-001,McCain French Fries Crispy 750g,Frozen Foods,McCain Foods,170.0,185.0,BFRI-1025,2026-07-03,2026-11-27,172,9,SAFE
+INST-POHA-005,Saffola FITTIFY Instant Gourmet Poha 80g,Instant Foods,Nestle India,40.0,45.0,BPOH-1420,2026-03-25,2026-09-02,55,18,WARNING
+DISC-GOODDAY-002,Britannia Good Day Butter Cookies 600g,Biscuits,Parle Products,140.0,150.0,BGOO-1007,2026-03-02,2027-01-21,208,4,SAFE
+DAIRY-MILK-001,Amul Taaza Toned Milk 1L,Dairy,Amul India,54.0,56.0,BMIL-1155,2026-02-22,2026-10-22,311,23,SAFE
+FROZEN-PEAS-002,Safal Frozen Green Peas 1kg,Frozen Foods,McCain Foods,130.0,145.0,BPEA-1252,2026-01-28,2027-01-22 07:49:56,231,18,SAFE

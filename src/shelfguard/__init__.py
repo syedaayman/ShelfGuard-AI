@@ -1,0 +1,3 @@
+"""
+ShelfGuard core module.
+"""
