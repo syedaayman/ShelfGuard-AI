@@ -112,7 +112,7 @@ def test_get_inventory_not_found(client):
     assert response.status_code == 404
 
 
-@patch("shelfguard.main.extract_product_data")
+@patch("shelfguard.main.extract_product_information")
 def test_ocr_upload_valid(mock_extract, client):
     mock_extract.return_value = OcrExtractionResult(
         product_name="Sample Beverage",

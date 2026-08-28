@@ -175,14 +175,14 @@ def extract_semantic_data(
     image_bytes: bytes,
     raw_ocr_lines: List[str],
     mime_type: str = "image/jpeg",
-    max_retries: int = 3
+    max_retries: int = 2
 ) -> Dict[str, Any]:
     """
-    Calls Google Gemini Flash-tier Vision API with image and supporting OCR text.
-    Implements exponential backoff with jitter on 429/503 for free-tier resilience.
+    Calls Google Gemini Flash-tier Vision API with optimized image and supporting OCR text.
+    Uses strict timeouts and rapid fallback for high performance and reliability.
     """
     api_key = _get_api_key()
-    model = os.environ.get("GEMINI_MODEL") or settings.gemini_model or "gemini-3.6-flash"
+    model = os.environ.get("GEMINI_MODEL") or settings.gemini_model or "gemini-2.5-flash"
     base_url = "https://generativelanguage.googleapis.com/v1beta/models"
     endpoint = f"{base_url}/{model}:generateContent?key={api_key}"
 
@@ -225,10 +225,10 @@ def extract_semantic_data(
     for attempt in range(max_retries):
         try:
             logger.info(
-                f"Calling Gemini Vision ({model}) for semantic packaging "
-                f"interpretation (attempt {attempt + 1}/{max_retries})..."
+                f"[Scanner] Calling Gemini Vision ({model}) (attempt {attempt + 1}/{max_retries}).."
             )
-            with httpx.Client(timeout=45.0) as client:
+            # Strict 8.0s timeout per API request
+            with httpx.Client(timeout=8.0) as client:
                 response = client.post(endpoint, json=payload)
 
             if response.status_code == 200:
@@ -248,59 +248,67 @@ def extract_semantic_data(
 
                     raw_content = content_parts[0].get("text", "{}")
                     parsed_data = json.loads(raw_content)
-                    logger.info("Semantic extraction completed successfully via Gemini Vision.")
+                    logger.info("[Scanner] Semantic extraction completed via Gemini Vision.")
                     return parsed_data
                 except Exception as parse_err:
                     logger.error(
-                        f"Failed to parse Gemini Vision JSON: {parse_err}. "
-                        f"Body: {response.text}"
+                        f"[Scanner] Failed to parse Gemini Vision JSON: {parse_err}. "
+                        f"Body: {response.text[:200]}"
                     )
                     raise SemanticExtractionError(
                         f"Failed to parse semantic model output: {parse_err}"
                     ) from parse_err
 
             elif response.status_code in [429, 503]:
-                sleep_time = (1.5 ** attempt) * 2.0 + random.uniform(0.5, 1.5)
                 logger.warning(
-                    f"Gemini API returned status {response.status_code}. "
-                    f"Backing off for {sleep_time:.2f}s before retry..."
+                    f"[Scanner] Gemini API returned status {response.status_code} (Service busy)."
                 )
-                time.sleep(sleep_time)
+                if attempt < max_retries - 1:
+                    sleep_time = 1.0 + random.uniform(0.1, 0.5)
+                    time.sleep(sleep_time)
                 last_error = SemanticRateLimitError(
-                    "Semantic extraction service is busy (free-tier rate limit reached). "
-                    "Please retry in a moment."
+                    f"Semantic extraction service is busy (HTTP {response.status_code})."
                 )
             elif response.status_code == 400:
-                logger.error(f"Gemini Vision client error (400): {response.text}")
+                logger.error(f"[Scanner] Gemini Vision client error (400): {response.text[:200]}")
                 raise SemanticExtractionError(
-                    f"Invalid request to Gemini Vision API: {response.text}"
+                    f"Invalid request to Gemini Vision API: {response.text[:200]}"
                 )
             elif response.status_code == 403:
-                logger.error(f"Gemini Vision authorization error (403): {response.text}")
+                logger.error(
+                    f"[Scanner] Gemini Vision auth error (403): {response.text[:200]}"
+                )
                 raise SemanticConfigError(
                     "Gemini API key is invalid or lacks necessary permissions."
                 )
+            elif response.status_code == 404:
+                logger.error(f"[Scanner] Gemini Vision model not found (404): {model}")
+                raise SemanticExtractionError(
+                    f"Gemini model '{model}' not found or unavailable."
+                )
             else:
                 logger.error(
-                    f"Gemini Vision returned unexpected status {response.status_code}: "
-                    f"{response.text}"
+                    f"[Scanner] Gemini Vision unexpected status {response.status_code}: "
+                    f"{response.text[:200]}"
                 )
                 raise SemanticExtractionError(
-                    f"Semantic vision service error (HTTP {response.status_code}): "
-                    f"{response.text}"
+                    f"Semantic vision service error (HTTP {response.status_code})."
                 )
 
         except (httpx.TimeoutException, httpx.NetworkError) as net_err:
-            logger.warning(f"Network error communicating with Gemini Vision: {net_err}.")
-            sleep_time = (1.5 ** attempt) * 1.5 + random.uniform(0.3, 1.0)
-            time.sleep(sleep_time)
+            logger.warning(f"[Scanner] Network timeout with Gemini Vision: {net_err}.")
+            if attempt < max_retries - 1:
+                time.sleep(0.5)
             last_error = SemanticExtractionError(
                 f"Network timeout communicating with semantic extraction service: {net_err}"
             )
         except SemanticExtractionError:
             raise
         except Exception as general_err:
-            logger.error(f"Unexpected error in semantic extractor: {general_err}", exc_info=True)
+            logger.error(
+                f"[Scanner] Unexpected error in semantic extractor: {general_err}",
+                exc_info=True
+            )
             raise SemanticExtractionError(
                 f"Unexpected error during semantic extraction: {general_err}"
             ) from general_err

@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
-import { LayoutDashboard, Package, ScanLine, Tag, Calculator, HeartHandshake, Activity } from 'lucide-react';
+import { LayoutDashboard, Package, ScanLine, Tag, Calculator, HeartHandshake, ShieldCheck } from 'lucide-react';
 
 import Dashboard from './pages/Dashboard';
 import Inventory from './pages/Inventory';
@@ -12,36 +12,45 @@ import NgoDonations from './pages/NgoDonations';
 function App() {
   return (
     <div className="app-container">
+      {/* Floating Deep Forest Green Sidebar */}
       <nav className="sidebar">
         <div className="sidebar-brand">
-          <Package className="text-accent" />
-          ShelfGuard
+          <div className="sidebar-brand-icon">
+            <ShieldCheck size={20} strokeWidth={2.5} />
+          </div>
+          <span>ShelfGuard</span>
         </div>
         
         <div className="nav-links">
           <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
-            <LayoutDashboard size={20} /> Dashboard
+            <LayoutDashboard size={19} strokeWidth={2} /> Dashboard
           </NavLink>
           <NavLink to="/inventory" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Package size={20} /> Inventory
+            <Package size={19} strokeWidth={2} /> Inventory Batches
           </NavLink>
           <NavLink to="/scanner" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <ScanLine size={20} /> Inventory Scanner
+            <ScanLine size={19} strokeWidth={2} /> Inventory Scanner
           </NavLink>
           <NavLink to="/pricing" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Tag size={20} /> Pricing
+            <Tag size={19} strokeWidth={2} /> Dynamic Pricing
           </NavLink>
           <NavLink to="/tax" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Calculator size={20} /> Tax Ledger
+            <Calculator size={19} strokeWidth={2} /> Tax Ledger
           </NavLink>
           <NavLink to="/ngo" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <HeartHandshake size={20} /> NGO Donations
+            <HeartHandshake size={19} strokeWidth={2} /> NGO Relief Router
           </NavLink>
         </div>
         
-        <div style={{ marginTop: 'auto' }}>
-          <div className="nav-item">
-            <Activity size={20} /> API Ready
+        {/* NGO Partners Active Cluster (Mirrors "Active Users +70" in Reference Design) */}
+        <div className="sidebar-partners">
+          <div className="sidebar-partners-title">NGO Relief Partners</div>
+          <div className="avatar-group">
+            <div className="avatar avatar-gold" title="Feeding India (Zomato)">FI</div>
+            <div className="avatar" title="Robin Hood Army">RH</div>
+            <div className="avatar" title="Akshaya Patra">AP</div>
+            <div className="avatar" title="Roti Bank Foundation">RB</div>
+            <div className="avatar avatar-count" title="No Food Waste & 5 More Partner Organizations">+5</div>
           </div>
         </div>
       </nav>

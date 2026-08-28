@@ -11,9 +11,13 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     model_path: str = "models/xgboost_pricing_model.joblib"
 
-    # Gemini Flash Tier Config
+    # Mistral Vision Model Config
+    mistral_api_key: Optional[str] = None
+    mistral_model: str = "ministral-14b-2512"
+
+    # Legacy config (deprecated)
     gemini_api_key: Optional[str] = None
-    gemini_model: str = "gemini-3.6-flash"
+    gemini_model: Optional[str] = "gemini-3.6-flash"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

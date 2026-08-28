@@ -1,4 +1,5 @@
 opencv-python-headless>=4.8.0
+paddleocr>=2.7.0
 easyocr>=1.7.0
 numpy>=1.24.0
 fastapi>=0.103.0
@@ -14,5 +15,4 @@ python-dotenv>=1.0.0
 pytest>=7.4.0
 httpx>=0.25.0
 python-multipart>=0.0.6
-ruff>=0.0.280  
- 
+ruff>=0.0.280

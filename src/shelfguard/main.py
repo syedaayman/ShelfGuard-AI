@@ -1,6 +1,5 @@
 import json
 import logging
-import os
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 from typing import Any, List, Optional
@@ -25,19 +24,21 @@ from shelfguard.database import (
     init_db,
     resolve_product,
 )
+from shelfguard.mistral_vision import (
+    ImageProcessingError,
+    MistralAPIError,
+    MistralConfigError,
+    MistralRateLimitError,
+    MistralTimeoutError,
+    _find_mistral_api_key,
+    extract_product_information,
+    get_mistral_model,
+)
 from shelfguard.ngo_router import (
     create_donation_requests,
     process_pending_donations,
     route_donation,
     scan_for_near_expiry,
-)
-from shelfguard.ocr_engine import (
-    ImageProcessingError,
-    OCRError,
-    SemanticConfigError,
-    SemanticExtractionError,
-    SemanticRateLimitError,
-    extract_product_data,
 )
 from shelfguard.pricing_engine import (
     calculate_dynamic_discount_batch,
@@ -94,20 +95,17 @@ async def lifespan(app: FastAPI):
                 f"Model feature mismatch. Expected {expected_features}, got {feature_names}"
             )
 
-        # Log GEMINI_API_KEY configuration status at server boot
-        from shelfguard.semantic_extractor import _find_gemini_api_key
-
-        api_key = _find_gemini_api_key()
-        model = os.environ.get("GEMINI_MODEL") or settings.gemini_model or "gemini-3.6-flash"
+        # Log MISTRAL_API_KEY configuration status at server boot
+        api_key = _find_mistral_api_key()
+        model = get_mistral_model()
         if api_key:
             masked_key = f"{api_key[:4]}...{api_key[-4:]}" if len(api_key) > 8 else "***"
             logger.info(
-                f"Gemini Vision API: Configured successfully (Model: {model}, Key: {masked_key})."
+                f"Mistral Vision API: Configured successfully (Model: {model}, Key: {masked_key})."
             )
         else:
             logger.warning(
-                "Gemini Vision API: GEMINI_API_KEY is NOT detected. "
-                "Scanner will use offline heuristic fallback."
+                "Mistral Vision API: MISTRAL_API_KEY is NOT detected in environment or .env file."
             )
 
         logger.info("Lifespan setup completed successfully.")
@@ -318,7 +316,7 @@ def get_inventory(sku: str, db: Session = Depends(get_db)):
 @app.post("/ocr/scan", response_model=OcrExtractionResult)
 async def scan_ocr(image: Optional[UploadFile] = File(None)):
     """
-    Scans a single product packaging image using hybrid OpenCV + EasyOCR + Gemini Vision AI.
+    Scans a single product packaging image using the official Mistral Vision API (Ministral 3 14B).
     """
     if not image or not image.filename:
         raise HTTPException(
@@ -327,10 +325,15 @@ async def scan_ocr(image: Optional[UploadFile] = File(None)):
         )
 
     content_type = image.content_type or ""
-    if not content_type.startswith("image/"):
+    clean_type = content_type.lower().split(";")[0].strip()
+    allowed_types = ["image/jpeg", "image/jpg", "image/png", "image/webp"]
+    if clean_type not in allowed_types and not content_type.startswith("image/"):
         raise HTTPException(
             status_code=fastapi_status.HTTP_400_BAD_REQUEST,
-            detail=f"Uploaded file must be a valid image format (received {content_type}).",
+            detail=(
+                f"Uploaded file must be a supported image format (JPEG, PNG, WEBP). "
+                f"Received '{content_type}'."
+            ),
         )
 
     try:
@@ -341,39 +344,40 @@ async def scan_ocr(image: Optional[UploadFile] = File(None)):
                 detail="Image exceeds the maximum allowed size of 15 MB.",
             )
 
-        result = extract_product_data(image_bytes, mime_type=content_type)
+        result = extract_product_information(image_bytes, mime_type=content_type)
         return result
 
     except HTTPException:
         raise
     except ImageProcessingError as e:
-        logger.warning(f"Image processing error: {e}")
+        logger.warning(f"[Scanner] Image processing error: {e}")
         raise HTTPException(status_code=fastapi_status.HTTP_400_BAD_REQUEST, detail=str(e))
-    except SemanticRateLimitError as e:
-        logger.warning(f"Semantic AI rate limit: {e}")
-        raise HTTPException(
-            status_code=fastapi_status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail=(
-                "Semantic extraction service is busy (free-tier rate limit reached). "
-                "Please retry in a moment."
-            ),
-        )
-    except (SemanticExtractionError, SemanticConfigError) as e:
-        logger.error(f"Semantic AI extraction error: {e}", exc_info=True)
+    except MistralConfigError as e:
+        logger.error(f"[Scanner] Mistral API configuration error: {e}")
         raise HTTPException(
             status_code=fastapi_status.HTTP_502_BAD_GATEWAY,
-            detail=(
-                "Semantic extraction service is currently unavailable. Please try again shortly."
-            ),
+            detail=f"Mistral Vision service configuration error: {str(e)}",
         )
-    except OCRError as e:
-        logger.error(f"OCR execution error: {e}", exc_info=True)
+    except MistralRateLimitError as e:
+        logger.warning(f"[Scanner] Mistral API rate limit: {e}")
         raise HTTPException(
-            status_code=fastapi_status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"OCR processing failed: {str(e)}",
+            status_code=fastapi_status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Mistral Vision API rate limit reached (429). Please retry in a moment.",
+        )
+    except MistralTimeoutError as e:
+        logger.warning(f"[Scanner] Mistral API timeout: {e}")
+        raise HTTPException(
+            status_code=fastapi_status.HTTP_504_GATEWAY_TIMEOUT,
+            detail="Mistral Vision API request timed out. Please try again.",
+        )
+    except MistralAPIError as e:
+        logger.error(f"[Scanner] Mistral API error: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=fastapi_status.HTTP_502_BAD_GATEWAY,
+            detail=f"Mistral Vision API service error: {str(e)}",
         )
     except Exception as e:
-        logger.error(f"Unexpected error during scan: {e}", exc_info=True)
+        logger.error(f"[Scanner] Unexpected error during scan: {e}", exc_info=True)
         raise HTTPException(
             status_code=fastapi_status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to process image scan due to an unexpected error.",

@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { getInventory } from '../api/client';
 import { Link } from 'react-router-dom';
-import { Search, Loader2, Filter, X } from 'lucide-react';
+import { Search, Loader2, Filter, X, ShieldCheck, AlertTriangle, AlertCircle, HeartHandshake, XCircle } from 'lucide-react';
 
-const STATUS_OPTIONS = [
+const STATUS_CHIPS = [
   { label: 'All Statuses', value: 'ALL' },
-  { label: 'SAFE (> 7 days)', value: 'SAFE' },
-  { label: 'NEAR EXPIRY (2 to 7 days)', value: 'NEAR_EXPIRY' },
-  { label: 'CRITICAL (6h to 2 days)', value: 'CRITICAL' },
-  { label: 'DONATION (within 6h)', value: 'DONATION' },
+  { label: 'SAFE (> 7d)', value: 'SAFE' },
+  { label: 'NEAR EXPIRY (2-7d)', value: 'NEAR_EXPIRY' },
+  { label: 'CRITICAL (6h-2d)', value: 'CRITICAL' },
+  { label: 'DONATION (≤ 6h)', value: 'DONATION' },
   { label: 'EXPIRED', value: 'EXPIRED' },
 ];
 
@@ -18,7 +18,6 @@ export default function Inventory() {
   const [error, setError] = useState(null);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('ALL');
-  const [showFilterDropdown, setShowFilterDropdown] = useState(false);
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
   const limit = 20;
@@ -56,20 +55,40 @@ export default function Inventory() {
     fetchInventoryData('', 'ALL', 0);
   };
 
-  const getStatusBadge = (status) => {
+  const getStatusPill = (status) => {
     switch (status) {
       case 'SAFE':
-        return <span className="badge badge-success px-2 py-0.5 text-xs font-semibold">SAFE</span>;
+        return (
+          <span className="status-pill status-safe">
+            <ShieldCheck size={13} /> SAFE
+          </span>
+        );
       case 'NEAR_EXPIRY':
-        return <span className="badge bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 px-2 py-0.5 text-xs font-semibold">NEAR EXPIRY</span>;
+        return (
+          <span className="status-pill status-near-expiry">
+            <AlertTriangle size={13} /> NEAR EXPIRY
+          </span>
+        );
       case 'CRITICAL':
-        return <span className="badge bg-orange-500/20 text-orange-400 border border-orange-500/30 px-2 py-0.5 text-xs font-semibold">CRITICAL</span>;
+        return (
+          <span className="status-pill status-critical">
+            <AlertCircle size={13} /> CRITICAL
+          </span>
+        );
       case 'DONATION':
-        return <span className="badge bg-purple-500/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 text-xs font-semibold animate-pulse">DONATION</span>;
+        return (
+          <span className="status-pill status-donation">
+            <HeartHandshake size={13} /> DONATION
+          </span>
+        );
       case 'EXPIRED':
-        return <span className="badge badge-danger px-2 py-0.5 text-xs font-semibold">EXPIRED</span>;
+        return (
+          <span className="status-pill status-expired">
+            <XCircle size={13} /> EXPIRED
+          </span>
+        );
       default:
-        return <span className="badge badge-neutral">{status}</span>;
+        return <span className="status-pill">{status}</span>;
     }
   };
 
@@ -79,78 +98,59 @@ export default function Inventory() {
     <div>
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
-          <h1 className="text-2xl font-bold">Inventory Batches</h1>
+          <h1>Inventory Batches</h1>
           <p className="text-sm text-muted">Real-time inventory tracking with dynamic expiry status recalculation.</p>
         </div>
+      </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
-          {/* Search Bar */}
-          <form onSubmit={handleSearchSubmit} className="flex gap-2">
-            <div className="relative">
+      {/* Search & Filter Card */}
+      <div className="card mb-6 p-5">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <form onSubmit={handleSearchSubmit} className="flex gap-2 flex-1">
+            <div className="relative flex-1">
               <input
                 type="text"
-                className="form-input text-sm pl-9 pr-3 py-1.5"
-                placeholder="Search Product, SKU, Batch, Manufacturer..."
+                className="form-input text-sm pl-9 pr-3"
+                placeholder="Search Product, SKU, Batch Number, Manufacturer..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                style={{ minWidth: '260px' }}
               />
-              <Search className="absolute left-3 top-2.5 text-gray-400" size={14} />
+              <Search className="absolute left-3 top-3 text-muted" size={16} />
             </div>
-            <button type="submit" className="btn btn-primary text-sm flex items-center gap-1 py-1.5">
+            <button type="submit" className="btn btn-secondary text-sm py-2">
               Search
             </button>
           </form>
 
-          {/* Filter Dropdown Toggle Button */}
-          <div className="relative">
-            <button
-              type="button"
-              className={`btn ${statusFilter !== 'ALL' ? 'btn-primary' : 'btn-secondary'} text-sm flex items-center gap-1.5 py-1.5`}
-              onClick={() => setShowFilterDropdown(!showFilterDropdown)}
-            >
-              <Filter size={15} />
-              Filter: {STATUS_OPTIONS.find((o) => o.value === statusFilter)?.label.split(' ')[0]}
-            </button>
-
-            {showFilterDropdown && (
-              <div className="absolute right-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-50 p-2">
-                <div className="text-xs font-semibold text-gray-400 px-3 py-1.5 uppercase tracking-wider">
-                  Filter by Expiry Status
-                </div>
-                {STATUS_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    className={`w-full text-left px-3 py-2 text-xs rounded-md transition flex items-center justify-between ${
-                      statusFilter === opt.value
-                        ? 'bg-accent/20 text-accent font-bold'
-                        : 'text-gray-300 hover:bg-gray-800'
-                    }`}
-                    onClick={() => {
-                      setStatusFilter(opt.value);
-                      setPage(0);
-                      setShowFilterDropdown(false);
-                    }}
-                  >
-                    <span>{opt.label}</span>
-                    {statusFilter === opt.value && <span className="text-accent">•</span>}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Clear Filters Button */}
           {isFiltered && (
             <button
               type="button"
-              className="btn btn-secondary text-sm flex items-center gap-1 text-gray-300 hover:text-white py-1.5"
+              className="btn btn-ghost text-xs flex items-center gap-1"
               onClick={handleClearFilters}
-              title="Clear Search and Status Filters"
             >
-              <X size={15} /> Clear Filters
+              <X size={14} /> Clear Filters
             </button>
           )}
+        </div>
+
+        {/* Filter Chips Horizontal Row */}
+        <div className="flex items-center gap-2 flex-wrap mt-4 pt-3 border-t border-subtle">
+          <div className="text-xs font-bold text-muted mr-1 flex items-center gap-1">
+            <Filter size={13} /> Filter:
+          </div>
+          {STATUS_CHIPS.map((chip) => (
+            <button
+              key={chip.value}
+              type="button"
+              className={`filter-chip ${statusFilter === chip.value ? 'active' : ''}`}
+              onClick={() => {
+                setStatusFilter(chip.value);
+                setPage(0);
+              }}
+            >
+              {chip.label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -159,120 +159,118 @@ export default function Inventory() {
       {/* Results Header Count */}
       <div className="flex justify-between items-center mb-3 px-1 text-xs text-muted">
         <div>
-          Showing <span className="font-semibold text-white">{total > 0 ? page * limit + 1 : 0}</span> to{' '}
-          <span className="font-semibold text-white">{Math.min((page + 1) * limit, total)}</span> of{' '}
-          <span className="font-semibold text-white">{total}</span> batches
-          {isFiltered && <span className="text-accent font-medium ml-1">(Filtered)</span>}
+          Showing <span className="font-bold text-primary font-mono">{total > 0 ? page * limit + 1 : 0}</span> to{' '}
+          <span className="font-bold text-primary font-mono">{Math.min((page + 1) * limit, total)}</span> of{' '}
+          <span className="font-bold text-primary font-mono">{total}</span> batches
+          {isFiltered && <span className="text-teal font-medium ml-1">(Filtered)</span>}
         </div>
       </div>
 
-      <div className="card">
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
         {loading ? (
           <div className="flex justify-center items-center py-16">
-            <Loader2 className="animate-spin text-accent" size={32} />
+            <Loader2 className="animate-spin text-teal" size={32} />
           </div>
         ) : items.length === 0 ? (
           <div className="text-center py-16 text-muted">
-            <p className="text-base font-semibold mb-1">No matching inventory batches found.</p>
+            <p className="text-base font-bold mb-1 text-primary">No matching inventory batches found.</p>
             <p className="text-xs">Try clearing filters or adjusting your search query.</p>
             {isFiltered && (
-              <button
-                className="btn btn-secondary text-xs mt-3"
-                onClick={handleClearFilters}
-              >
+              <button className="btn btn-secondary text-xs mt-3" onClick={handleClearFilters}>
                 Clear Filters
               </button>
             )}
           </div>
         ) : (
-          <div className="table-wrapper overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+          <div className="table-wrapper">
+            <table>
               <thead>
-                <tr className="border-b border-gray-700 text-xs font-semibold text-gray-400">
-                  <th className="py-3 px-3">Product</th>
-                  <th className="py-3 px-3">SKU</th>
-                  <th className="py-3 px-3">Batch / Lot</th>
-                  <th className="py-3 px-3">Stock</th>
-                  <th className="py-3 px-3">MFG Date</th>
-                  <th className="py-3 px-3">Expiry Date</th>
-                  <th className="py-3 px-3">Remaining Shelf Life</th>
-                  <th className="py-3 px-3">MRP / Base Price</th>
-                  <th className="py-3 px-3">AI Dynamic Discount</th>
-                  <th className="py-3 px-3">Status</th>
+                <tr>
+                  <th>Product</th>
+                  <th>SKU</th>
+                  <th>Batch / Lot</th>
+                  <th>Stock</th>
+                  <th>MFG Date</th>
+                  <th>Expiry Date</th>
+                  <th>Remaining Shelf Life</th>
+                  <th>MRP / Base</th>
+                  <th>AI Dynamic Discount</th>
+                  <th>Status</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-800 text-sm">
+              <tbody>
                 {items.map((item) => (
-                  <tr key={item.internal_batch_id} className="hover:bg-gray-800/50 transition">
-                    <td className="py-3 px-3 font-semibold text-white">
-                      <Link to={`/inventory/${encodeURIComponent(item.sku)}`} className="hover:text-accent transition">
+                  <tr key={item.internal_batch_id} data-status={item.status}>
+                    <td className="font-bold">
+                      <Link to={`/inventory/${encodeURIComponent(item.sku)}`} className="text-primary hover:text-teal transition">
                         {item.product_name}
                       </Link>
                       {item.manufacturer && (
                         <div className="text-xs text-muted font-normal">{item.manufacturer}</div>
                       )}
                     </td>
-                    <td className="py-3 px-3">
-                      <Link to={`/inventory/${encodeURIComponent(item.sku)}`} className="text-accent hover:underline font-mono text-xs">
+                    <td>
+                      <Link to={`/inventory/${encodeURIComponent(item.sku)}`} className="text-teal hover:underline font-mono text-xs font-semibold">
                         {item.sku}
                       </Link>
                     </td>
-                    <td className="py-3 px-3">
+                    <td>
                       {item.batch_number ? (
-                        <span className="bg-gray-800 border border-gray-700 px-2 py-0.5 rounded text-xs font-mono text-gray-200">
+                        <span className="bg-page border border-subtle px-2 py-0.5 rounded-md text-xs font-mono text-primary font-semibold">
                           {item.batch_number}
                         </span>
                       ) : (
                         <span className="text-muted text-xs italic">N/A</span>
                       )}
                     </td>
-                    <td className="py-3 px-3">
-                      <span className="font-mono font-bold text-white">{item.stock_quantity}</span>
+                    <td>
+                      <span className="font-mono font-bold text-primary">{item.stock_quantity}</span>
                     </td>
-                    <td className="py-3 px-3 text-muted text-xs">
+                    <td className="text-muted text-xs font-mono">
                       {item.manufacturing_date || '-'}
                     </td>
-                    <td className="py-3 px-3 text-xs font-mono">
+                    <td className="text-xs font-mono font-semibold">
                       {item.expiry_date}
                     </td>
-                    <td className="py-3 px-3 text-xs font-medium">
-                      <span className={
-                        item.status === 'EXPIRED' ? 'text-rose-400 font-semibold' :
-                        item.status === 'DONATION' ? 'text-purple-300 font-semibold' :
-                        item.status === 'CRITICAL' ? 'text-orange-400 font-semibold' :
-                        item.status === 'NEAR_EXPIRY' ? 'text-yellow-400' :
-                        'text-emerald-400'
-                      }>
+                    <td className="text-xs font-semibold">
+                      <span style={{
+                        color: item.status === 'EXPIRED' ? 'var(--status-expired)' :
+                               item.status === 'DONATION' ? '#B57F1E' :
+                               item.status === 'CRITICAL' ? 'var(--status-critical)' :
+                               item.status === 'NEAR_EXPIRY' ? 'var(--status-near-expiry)' :
+                               'var(--status-safe)'
+                      }}>
                         {item.remaining_text || '-'}
                       </span>
                     </td>
-                    <td className="py-3 px-3 text-xs font-mono">
+                    <td className="text-xs font-mono">
                       {item.mrp != null ? `₹${item.mrp.toFixed(2)}` : (item.base_price != null ? `₹${item.base_price.toFixed(2)}` : '-')}
                     </td>
-                    <td className="py-3 px-3">
+                    <td>
+                      {/* AI Dynamic Discount Pill Treatment */}
                       {item.is_override ? (
                         item.override_reason === 'EXPIRED' ? (
-                          <span className="badge bg-rose-500/20 text-rose-400 border border-rose-500/30 px-2 py-0.5 text-xs font-semibold">
-                            N/A (EXPIRED)
+                          <span className="status-pill status-expired">
+                            EXPIRED (0%)
                           </span>
                         ) : (
-                          <span className="badge bg-purple-500/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 text-xs font-semibold animate-pulse">
+                          <span className="status-pill status-donation">
                             NGO RELIEF (100%)
                           </span>
                         )
                       ) : (
-                        <div>
-                          <span className="badge bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 text-xs font-bold font-mono">
+                        <div className="flex flex-col items-start gap-0.5">
+                          <span className="status-pill status-safe font-mono" style={{ fontSize: '11px' }}>
                             ▼ {item.dynamic_discount_percent != null ? item.dynamic_discount_percent.toFixed(0) : 0}% OFF
                           </span>
-                          <div className="text-xs text-white font-mono font-semibold mt-0.5">
+                          <span className="text-xs font-mono font-bold text-primary ml-1">
                             ₹{item.final_price != null ? item.final_price.toFixed(2) : (item.mrp || item.base_price || 0).toFixed(2)}
-                          </div>
+                          </span>
                         </div>
                       )}
                     </td>
-                    <td className="py-3 px-3">
-                      {getStatusBadge(item.status, item.remaining_text)}
+                    <td>
+                      {getStatusPill(item.status)}
                     </td>
                   </tr>
                 ))}
@@ -282,9 +280,10 @@ export default function Inventory() {
         )}
 
         {total > 0 && (
-          <div className="flex justify-between items-center mt-4 pt-3 border-t border-gray-700">
+          <div className="flex justify-between items-center p-4 border-t border-subtle">
             <div className="text-xs text-muted">
-              Page {page + 1} of {Math.ceil(total / limit) || 1}
+              Page <span className="font-mono font-bold text-primary">{page + 1}</span> of{' '}
+              <span className="font-mono font-bold text-primary">{Math.ceil(total / limit) || 1}</span>
             </div>
             <div className="flex gap-2">
               <button 

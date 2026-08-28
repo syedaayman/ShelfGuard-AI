@@ -86,7 +86,7 @@ export const scanOcr = (imageFile) => {
   return fetchAPI("/ocr/scan", {
     method: "POST",
     body: formData,
-    timeout: 60000,
+    timeout: 30000,
   });
 };
 

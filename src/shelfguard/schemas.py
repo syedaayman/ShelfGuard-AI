@@ -128,8 +128,10 @@ class PricingResponse(BaseModel):
 
 
 class TaxRequest(BaseModel):
-    taxable_amount: Decimal = Field(..., ge=0, description="Amount subject to tax")
-    tax_rate: Decimal = Field(..., ge=0, description="Explicit tax rate (e.g., 0.05 for 5%)")
+    taxable_amount: Decimal = Field(..., ge=Decimal("0"), description="Amount subject to tax")
+    tax_rate: Decimal = Field(
+        ..., ge=Decimal("0"), description="Explicit tax rate (e.g., 0.05 for 5%)"
+    )
 
 
 class TaxResponse(BaseModel):
@@ -139,8 +141,8 @@ class TaxResponse(BaseModel):
 
 class TaxLedgerInsertRequest(BaseModel):
     transaction_id: str = Field(..., min_length=1)
-    taxable_amount: Decimal = Field(..., ge=0)
-    tax_rate: Decimal = Field(..., ge=0)
+    taxable_amount: Decimal = Field(..., ge=Decimal("0"))
+    tax_rate: Decimal = Field(..., ge=Decimal("0"))
 
 
 class TaxLedgerResponse(BaseModel):
@@ -180,7 +182,7 @@ class DonationItemRequest(BaseModel):
 
 class DonationCreateRequest(BaseModel):
     ngo_name: str = Field(..., min_length=1)
-    items: List[DonationItemRequest] = Field(..., min_items=1)
+    items: List[DonationItemRequest] = Field(..., min_length=1)
 
 
 class DonationRecord(BaseModel):
@@ -227,6 +229,11 @@ class FieldExtraction(BaseModel):
 
 class OcrExtractionResult(BaseModel):
     success: bool = True
+    ocr_engine: str = "paddleocr"
+    fallback_used: bool = False
+    semantic_engine: Optional[str] = None
+    overall_confidence: float = 0.0
+
     product_name: Optional[str] = None
     manufacturer: Optional[str] = None
     sku: Optional[str] = None
@@ -237,6 +244,7 @@ class OcrExtractionResult(BaseModel):
     base_price: Optional[float] = None
     category: Optional[str] = None
 
+    fields: Dict[str, Any] = {}
     semantic_fields: Dict[str, FieldExtraction] = {}
     confidence: Dict[str, float] = {}
     raw_text: str = ""
