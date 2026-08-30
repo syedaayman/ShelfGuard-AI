@@ -415,3 +415,68 @@ def test_phase10_pricing_recommend_consistency(client):
     assert data["dynamic_discount_percent"] == 50.0
     assert data["final_price"] == 100.0
 
+
+def test_dashboard_categories_endpoint(client):
+    response = client.get("/api/dashboard/categories")
+    assert response.status_code == 200
+    data = response.json()
+    assert "items" in data
+    assert "total_batches" in data
+    assert "total_categories" in data
+    assert data["total_batches"] >= 1
+    assert data["total_categories"] >= 1
+    assert any(i["category"] == "Test Category" for i in data["items"])
+    assert data["items"][0]["percentage"] > 0.0
+
+
+def test_dashboard_trends_endpoint(client):
+    response = client.get("/api/dashboard/trends")
+    assert response.status_code == 200
+    data = response.json()
+    assert "stages" in data
+    assert "labels" in data
+    assert "discount_rates" in data
+    assert "demand_velocities" in data
+    assert len(data["labels"]) == 5
+    assert len(data["discount_rates"]) == 5
+    assert len(data["demand_velocities"]) == 5
+    assert "summary_insight" in data
+    # Test batch in setup_db has expiry in 2027 (> 168h -> SAFE)
+    safe_stage = next(s for s in data["stages"] if s["stage_key"] == "SAFE")
+    assert safe_stage["batch_count"] >= 1
+
+
+def test_dashboard_dynamic_update_when_batch_added(client):
+    # Initial state
+    cat_res1 = client.get("/api/dashboard/categories")
+    assert cat_res1.status_code == 200
+    init_total = cat_res1.json()["total_batches"]
+
+    # Add a new batch in Bakery category
+    new_batch_payload = {
+        "sku": "BAKERY-001",
+        "product_name": "Artisan Bread",
+        "category": "Bakery",
+        "manufacturer": "Local Bakers",
+        "batch_number": "B-BAKE-99",
+        "manufacturing_date": "2026-08-01",
+        "expiry_date": "2026-09-01",
+        "stock_quantity": 40,
+        "mrp": 60.0,
+        "base_price": 50.0,
+        "daily_demand": 8,
+    }
+    create_res = client.post("/inventory/batches", json=new_batch_payload)
+    assert create_res.status_code == 200
+
+    # Verify categories endpoint immediately reflects the newly added category and increased total
+    cat_res2 = client.get("/api/dashboard/categories")
+    assert cat_res2.status_code == 200
+    updated_data = cat_res2.json()
+    assert updated_data["total_batches"] == init_total + 1
+    bakery_item = next((i for i in updated_data["items"] if i["category"] == "Bakery"), None)
+    assert bakery_item is not None
+    assert bakery_item["count"] == 1
+    assert bakery_item["total_stock_units"] == 40
+
+

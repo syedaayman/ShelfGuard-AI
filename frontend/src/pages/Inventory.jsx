@@ -28,7 +28,24 @@ export default function Inventory() {
     try {
       const offset = pageIndex * limit;
       const res = await getInventory(limit, offset, searchQuery, statusVal);
-      setItems(res.items);
+
+      // Prioritize active/actionable items first, expired last
+      const STATUS_PRIORITY = {
+        CRITICAL: 1,
+        DONATION: 2,
+        NEAR_EXPIRY: 3,
+        SAFE: 4,
+        EXPIRED: 5,
+      };
+
+      const sortedItems = [...res.items].sort((a, b) => {
+        const pA = STATUS_PRIORITY[a.status] || 99;
+        const pB = STATUS_PRIORITY[b.status] || 99;
+        if (pA !== pB) return pA - pB;
+        return (a.remaining_hours || 0) - (b.remaining_hours || 0);
+      });
+
+      setItems(sortedItems);
       setTotal(res.total);
     } catch (err) {
       setError(err.message);
@@ -60,31 +77,31 @@ export default function Inventory() {
       case 'SAFE':
         return (
           <span className="status-pill status-safe">
-            <ShieldCheck size={13} /> SAFE
+            <ShieldCheck size={12} /> SAFE
           </span>
         );
       case 'NEAR_EXPIRY':
         return (
           <span className="status-pill status-near-expiry">
-            <AlertTriangle size={13} /> NEAR EXPIRY
+            <AlertTriangle size={12} /> NEAR EXPIRY
           </span>
         );
       case 'CRITICAL':
         return (
           <span className="status-pill status-critical">
-            <AlertCircle size={13} /> CRITICAL
+            <AlertCircle size={12} /> CRITICAL
           </span>
         );
       case 'DONATION':
         return (
           <span className="status-pill status-donation">
-            <HeartHandshake size={13} /> DONATION
+            <HeartHandshake size={12} /> DONATION
           </span>
         );
       case 'EXPIRED':
         return (
           <span className="status-pill status-expired">
-            <XCircle size={13} /> EXPIRED
+            <XCircle size={12} /> EXPIRED
           </span>
         );
       default:
@@ -104,7 +121,7 @@ export default function Inventory() {
       </div>
 
       {/* Search & Filter Card */}
-      <div className="card mb-6 p-5">
+      <div className="card mb-6 p-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <form onSubmit={handleSearchSubmit} className="flex gap-2 flex-1">
             <div className="relative flex-1">
@@ -117,7 +134,7 @@ export default function Inventory() {
               />
               <Search className="absolute left-3 top-3 text-muted" size={16} />
             </div>
-            <button type="submit" className="btn btn-secondary text-sm py-2">
+            <button type="submit" className="btn btn-secondary text-sm">
               Search
             </button>
           </form>
@@ -134,7 +151,7 @@ export default function Inventory() {
         </div>
 
         {/* Filter Chips Horizontal Row */}
-        <div className="flex items-center gap-2 flex-wrap mt-4 pt-3 border-t border-subtle">
+        <div className="flex items-center gap-2 flex-wrap mt-3 pt-3 border-t border-subtle">
           <div className="text-xs font-bold text-muted mr-1 flex items-center gap-1">
             <Filter size={13} /> Filter:
           </div>
@@ -186,56 +203,79 @@ export default function Inventory() {
             <table>
               <thead>
                 <tr>
-                  <th>Product</th>
-                  <th>SKU</th>
-                  <th>Batch / Lot</th>
-                  <th>Stock</th>
-                  <th>MFG Date</th>
-                  <th>Expiry Date</th>
-                  <th>Remaining Shelf Life</th>
-                  <th>MRP / Base</th>
-                  <th>AI Dynamic Discount</th>
-                  <th>Status</th>
+                  <th style={{ textAlign: 'left' }}>Product</th>
+                  <th style={{ textAlign: 'left' }}>SKU</th>
+                  <th style={{ textAlign: 'left' }}>Batch / Lot</th>
+                  <th style={{ textAlign: 'center' }}>Stock</th>
+                  <th style={{ textAlign: 'center' }}>MFG Date</th>
+                  <th style={{ textAlign: 'center' }}>Expiry Date</th>
+                  <th style={{ textAlign: 'center' }}>Remaining Shelf Life</th>
+                  <th style={{ textAlign: 'right' }}>MRP / Base</th>
+                  <th style={{ textAlign: 'center' }}>AI Dynamic Discount</th>
+                  <th style={{ textAlign: 'center' }}>Status</th>
                 </tr>
               </thead>
               <tbody>
                 {items.map((item) => (
                   <tr key={item.internal_batch_id} data-status={item.status}>
-                    <td className="font-bold">
-                      <Link to={`/inventory/${encodeURIComponent(item.sku)}`} className="text-primary hover:text-teal transition">
+                    {/* PRODUCT NAME — NO BLUE HYPERLINK, BOLD DARK TEXT WITH MUTED METADATA */}
+                    <td style={{ textAlign: 'left' }}>
+                      <Link 
+                        to={`/inventory/${encodeURIComponent(item.sku)}`} 
+                        style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 700 }}
+                        className="hover:text-teal transition"
+                      >
                         {item.product_name}
                       </Link>
                       {item.manufacturer && (
-                        <div className="text-xs text-muted font-normal">{item.manufacturer}</div>
+                        <div className="text-xs text-muted" style={{ fontWeight: 500, marginTop: '2px' }}>
+                          {item.manufacturer}
+                        </div>
                       )}
                     </td>
-                    <td>
-                      <Link to={`/inventory/${encodeURIComponent(item.sku)}`} className="text-teal hover:underline font-mono text-xs font-semibold">
+
+                    {/* SKU */}
+                    <td style={{ textAlign: 'left' }}>
+                      <Link 
+                        to={`/inventory/${encodeURIComponent(item.sku)}`} 
+                        style={{ textDecoration: 'none' }}
+                        className="font-mono text-xs font-semibold text-secondary hover:text-teal transition"
+                      >
                         {item.sku}
                       </Link>
                     </td>
-                    <td>
+
+                    {/* BATCH NUMBER */}
+                    <td style={{ textAlign: 'left' }}>
                       {item.batch_number ? (
-                        <span className="bg-page border border-subtle px-2 py-0.5 rounded-md text-xs font-mono text-primary font-semibold">
+                        <span className="bg-page border border-subtle px-2 py-0.5 rounded text-xs font-mono text-primary font-semibold">
                           {item.batch_number}
                         </span>
                       ) : (
                         <span className="text-muted text-xs italic">N/A</span>
                       )}
                     </td>
-                    <td>
+
+                    {/* STOCK */}
+                    <td style={{ textAlign: 'center' }}>
                       <span className="font-mono font-bold text-primary">{item.stock_quantity}</span>
                     </td>
-                    <td className="text-muted text-xs font-mono">
+
+                    {/* MFG DATE */}
+                    <td style={{ textAlign: 'center' }} className="text-muted text-xs font-mono">
                       {item.manufacturing_date || '-'}
                     </td>
-                    <td className="text-xs font-mono font-semibold">
+
+                    {/* EXPIRY DATE */}
+                    <td style={{ textAlign: 'center' }} className="text-xs font-mono font-semibold">
                       {item.expiry_date}
                     </td>
-                    <td className="text-xs font-semibold">
+
+                    {/* REMAINING SHELF LIFE */}
+                    <td style={{ textAlign: 'center' }} className="text-xs font-semibold">
                       <span style={{
                         color: item.status === 'EXPIRED' ? 'var(--status-expired)' :
-                               item.status === 'DONATION' ? '#B57F1E' :
+                               item.status === 'DONATION' ? 'var(--status-donation)' :
                                item.status === 'CRITICAL' ? 'var(--status-critical)' :
                                item.status === 'NEAR_EXPIRY' ? 'var(--status-near-expiry)' :
                                'var(--status-safe)'
@@ -243,11 +283,14 @@ export default function Inventory() {
                         {item.remaining_text || '-'}
                       </span>
                     </td>
-                    <td className="text-xs font-mono">
+
+                    {/* MRP / BASE PRICE */}
+                    <td style={{ textAlign: 'right' }} className="text-xs font-mono">
                       {item.mrp != null ? `₹${item.mrp.toFixed(2)}` : (item.base_price != null ? `₹${item.base_price.toFixed(2)}` : '-')}
                     </td>
-                    <td>
-                      {/* AI Dynamic Discount Pill Treatment */}
+
+                    {/* AI DYNAMIC DISCOUNT */}
+                    <td style={{ textAlign: 'center' }}>
                       {item.is_override ? (
                         item.override_reason === 'EXPIRED' ? (
                           <span className="status-pill status-expired">
@@ -259,17 +302,19 @@ export default function Inventory() {
                           </span>
                         )
                       ) : (
-                        <div className="flex flex-col items-start gap-0.5">
-                          <span className="status-pill status-safe font-mono" style={{ fontSize: '11px' }}>
+                        <div className="inline-flex flex-col items-center gap-0.5">
+                          <span className="status-pill status-safe font-mono" style={{ fontSize: '10.5px' }}>
                             ▼ {item.dynamic_discount_percent != null ? item.dynamic_discount_percent.toFixed(0) : 0}% OFF
                           </span>
-                          <span className="text-xs font-mono font-bold text-primary ml-1">
+                          <span className="text-xs font-mono font-bold text-primary">
                             ₹{item.final_price != null ? item.final_price.toFixed(2) : (item.mrp || item.base_price || 0).toFixed(2)}
                           </span>
                         </div>
                       )}
                     </td>
-                    <td>
+
+                    {/* STATUS */}
+                    <td style={{ textAlign: 'center' }}>
                       {getStatusPill(item.status)}
                     </td>
                   </tr>

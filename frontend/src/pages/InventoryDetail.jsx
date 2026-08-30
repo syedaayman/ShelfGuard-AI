@@ -113,20 +113,20 @@ export default function InventoryDetail() {
                 <table>
                   <thead>
                     <tr>
-                      <th>Batch / Lot</th>
-                      <th>Internal ID</th>
-                      <th>MFG Date</th>
-                      <th>Expiry Date</th>
-                      <th>Stock Quantity</th>
-                      <th>Current Discount</th>
-                      <th>Daily Demand</th>
-                      <th>Status</th>
+                      <th style={{ textAlign: 'left' }}>Batch / Lot</th>
+                      <th style={{ textAlign: 'left' }}>Internal ID</th>
+                      <th style={{ textAlign: 'center' }}>MFG Date</th>
+                      <th style={{ textAlign: 'center' }}>Expiry Date</th>
+                      <th style={{ textAlign: 'center' }}>Stock Quantity</th>
+                      <th style={{ textAlign: 'center' }}>Current Discount</th>
+                      <th style={{ textAlign: 'center' }}>Daily Demand</th>
+                      <th style={{ textAlign: 'center' }}>Status</th>
                     </tr>
                   </thead>
                   <tbody>
                     {product.batches.map((batch) => (
                       <tr key={batch.id} data-status={batch.status}>
-                        <td>
+                        <td style={{ textAlign: 'left' }}>
                           {batch.batch_number ? (
                             <span className="bg-page border border-subtle px-2 py-0.5 rounded text-xs font-mono text-primary font-bold">
                               {batch.batch_number}
@@ -135,15 +135,15 @@ export default function InventoryDetail() {
                             <span className="text-muted italic text-xs">N/A</span>
                           )}
                         </td>
-                        <td className="text-xs text-muted font-mono">{batch.internal_batch_id}</td>
-                        <td className="text-xs font-mono text-muted">{batch.manufacturing_date || '-'}</td>
-                        <td className="text-xs font-mono font-semibold">
+                        <td style={{ textAlign: 'left' }} className="text-xs text-muted font-mono">{batch.internal_batch_id}</td>
+                        <td style={{ textAlign: 'center' }} className="text-xs font-mono text-muted">{batch.manufacturing_date || '-'}</td>
+                        <td style={{ textAlign: 'center' }} className="text-xs font-mono font-semibold">
                           {batch.expiry_date}
                         </td>
-                        <td className="font-mono text-base font-bold text-primary">{batch.stock_quantity} units</td>
-                        <td className="font-mono font-bold text-gold">{(batch.current_discount * 100).toFixed(0)}% OFF</td>
-                        <td className="font-mono font-bold">{batch.daily_demand}</td>
-                        <td>
+                        <td style={{ textAlign: 'center' }} className="font-mono text-sm font-bold text-primary">{batch.stock_quantity} units</td>
+                        <td style={{ textAlign: 'center' }} className="font-mono font-bold text-gold">{(batch.current_discount * 100).toFixed(0)}% OFF</td>
+                        <td style={{ textAlign: 'center' }} className="font-mono font-bold">{batch.daily_demand}</td>
+                        <td style={{ textAlign: 'center' }}>
                           {getStatusPill(batch.status)}
                         </td>
                       </tr>

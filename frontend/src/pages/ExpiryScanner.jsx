@@ -273,13 +273,13 @@ export default function ExpiryScanner() {
       <div className="flex items-center justify-between mb-6 pb-2 border-b border-subtle">
         <div>
           <h1 className="flex items-center gap-3">
-            Inventory Scanner
+            AI-Powered Product Scanner
             <span className="status-pill status-safe font-mono text-xs">
-              Mistral Vision AI
+              Ministral 3 14B
             </span>
           </h1>
           <p className="text-sm text-muted">
-            Upload product packaging photo to automatically extract product details, batch numbers, MRP, and shelf life dates.
+            Extract product, batch, MRP and expiry information from packaging.
           </p>
         </div>
       </div>
@@ -388,11 +388,11 @@ export default function ExpiryScanner() {
                   onDrop={handleDrop}
                 >
                   <label className="cursor-pointer flex flex-col items-center justify-center">
-                    <Upload size={36} className="mb-3 text-teal" strokeWidth={1.5} />
+                    <Upload size={34} className="mb-2 text-teal" strokeWidth={1.5} />
                     <span className="text-sm font-bold text-primary mb-1">Drag & drop packaging photo here</span>
-                    <span className="text-xs text-muted mb-3">or click to browse your file system</span>
-                    <span className="btn btn-secondary text-xs py-1.5 px-4">Choose Photo</span>
-                    <input type="file" accept="image/*" className="hidden" onChange={handleImageChange} />
+                    <span className="text-xs text-muted mb-3">Supports JPEG, PNG, WebP up to 15MB</span>
+                    <span className="btn btn-secondary text-xs">Choose Photo</span>
+                    <input type="file" accept="image/*" style={{ display: 'none' }} onChange={handleImageChange} />
                   </label>
                 </div>
               ) : (
@@ -406,21 +406,18 @@ export default function ExpiryScanner() {
               )}
 
               {imagePreview && (
-                <label className="btn btn-secondary text-xs cursor-pointer w-full text-center py-2 mt-3" style={{ width: '100%' }}>
+                <label className="btn btn-secondary text-xs cursor-pointer w-full text-center py-2 mt-3" style={{ width: '100%', display: 'flex' }}>
                   Change Product Photo
-                  <input type="file" accept="image/*" className="hidden" onChange={handleImageChange} />
+                  <input type="file" accept="image/*" style={{ display: 'none' }} onChange={handleImageChange} />
                 </label>
               )}
             </div>
 
             {/* INITIAL SCAN BUTTON */}
             {!ocrResult && (
-              <div className="card text-center py-6">
-                <p className="text-xs text-muted mb-4">
-                  Mistral Vision model (Ministral 3 14B) accurately extracts packaging text, product details, batch numbers, MRP, and shelf-life dates directly from packaging photos.
-                </p>
+              <div className="card text-center py-5">
                 <button 
-                  className="btn btn-primary w-full flex justify-center items-center gap-2 py-3 text-sm font-bold"
+                  className="btn btn-primary w-full flex justify-center items-center gap-2 py-2.5 text-sm font-bold"
                   onClick={handleScan}
                   disabled={loading || !image}
                   style={{ width: '100%' }}

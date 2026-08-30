@@ -221,6 +221,35 @@ class DashboardStatsResponse(BaseModel):
     donation_units_count: int
 
 
+class CategoryShareItem(BaseModel):
+    category: str
+    count: int
+    total_stock_units: int
+    percentage: float = 0.0
+
+
+class CategoryShareResponse(BaseModel):
+    items: List[CategoryShareItem]
+    total_batches: int
+    total_categories: int
+
+
+class TrendStageMetric(BaseModel):
+    stage_key: str
+    stage_label: str
+    batch_count: int
+    avg_discount_percent: float
+    avg_daily_demand: float
+
+
+class DashboardTrendsResponse(BaseModel):
+    stages: List[TrendStageMetric]
+    labels: List[str]
+    discount_rates: List[float]
+    demand_velocities: List[float]
+    summary_insight: str
+
+
 class FieldExtraction(BaseModel):
     value: Optional[Any] = None
     confidence: float = 0.0

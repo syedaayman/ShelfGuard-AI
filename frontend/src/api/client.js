@@ -71,6 +71,10 @@ export const getHealth = () => fetchAPI("/health");
 
 export const getDashboardStats = () => fetchAPI("/api/dashboard/stats");
 
+export const getDashboardCategories = () => fetchAPI("/api/dashboard/categories");
+
+export const getDashboardTrends = () => fetchAPI("/api/dashboard/trends");
+
 export const getInventory = (limit = 50, offset = 0, search = "", status = "") => {
   const params = new URLSearchParams({ limit, offset });
   if (search) params.append("search", search);

@@ -47,7 +47,10 @@ from shelfguard.pricing_engine import (
 from shelfguard.schemas import (
     BatchCreateRequest,
     BatchResponse,
+    CategoryShareItem,
+    CategoryShareResponse,
     DashboardStatsResponse,
+    DashboardTrendsResponse,
     DonationCandidate,
     DonationCreateRequest,
     DonationRecord,
@@ -62,6 +65,7 @@ from shelfguard.schemas import (
     TaxLedgerResponse,
     TaxRequest,
     TaxResponse,
+    TrendStageMetric,
 )
 from shelfguard.tax_ledger import TaxCalculator, TaxLedgerManager
 
@@ -439,6 +443,7 @@ def create_or_update_batch(request: BatchCreateRequest, db: Session = Depends(ge
             manufacturer=request.manufacturer,
             base_price=request.base_price,
             mrp=request.mrp,
+            category=request.category,
         )
 
         clean_batch_no = request.batch_number.strip() if request.batch_number else None
@@ -659,6 +664,167 @@ def get_dashboard_stats(db: Session = Depends(get_db)):
         raise HTTPException(
             status_code=fastapi_status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Internal server error",
+        )
+
+
+@app.get("/api/dashboard/categories", response_model=CategoryShareResponse)
+def get_dashboard_categories(db: Session = Depends(get_db)):
+    try:
+        from sqlalchemy import func
+
+        # Query total batches and stock units aggregated across the full database
+        results = (
+            db.query(
+                func.coalesce(Product.category, "Uncategorized").label("category"),
+                func.count(InventoryBatch.id).label("batch_count"),
+                func.coalesce(func.sum(InventoryBatch.stock_quantity), 0).label("total_stock"),
+            )
+            .join(InventoryBatch, Product.id == InventoryBatch.product_id)
+            .group_by(Product.category)
+            .order_by(func.count(InventoryBatch.id).desc())
+            .all()
+        )
+
+        total_batches = sum(row.batch_count for row in results)
+        items = []
+        for row in results:
+            pct = round((row.batch_count / total_batches * 100.0), 1) if total_batches > 0 else 0.0
+            items.append(
+                CategoryShareItem(
+                    category=row.category,
+                    count=row.batch_count,
+                    total_stock_units=int(row.total_stock),
+                    percentage=pct,
+                )
+            )
+
+        return CategoryShareResponse(
+            items=items,
+            total_batches=total_batches,
+            total_categories=len(items),
+        )
+    except Exception as e:
+        logger.error(f"Dashboard categories calculation error: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=fastapi_status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to compute category analytics",
+        )
+
+
+@app.get("/api/dashboard/trends", response_model=DashboardTrendsResponse)
+def get_dashboard_trends(db: Session = Depends(get_db)):
+    try:
+        process_pending_donations(db)
+
+        # Query all live inventory batches with product details
+        batch_records = (
+            db.query(InventoryBatch, Product)
+            .join(Product, InventoryBatch.product_id == Product.id)
+            .all()
+        )
+
+        if not batch_records:
+            return DashboardTrendsResponse(
+                stages=[],
+                labels=[],
+                discount_rates=[],
+                demand_velocities=[],
+                summary_insight="No inventory batches currently available to evaluate trends.",
+            )
+
+        # Prepare vectorized inference payload
+        batch_items_data = []
+        raw_meta = []
+        for batch, product in batch_records:
+            exp_info = calculate_expiry_status(batch.expiry_date)
+            dyn_status = exp_info["status"]
+            rem_h = exp_info["remaining_hours"]
+            ref_price = float(product.mrp if product.mrp is not None else product.base_price)
+
+            batch_items_data.append(
+                {
+                    "remaining_hours": rem_h,
+                    "base_price": ref_price,
+                    "stock_quantity": batch.stock_quantity,
+                    "daily_demand": batch.daily_demand,
+                    "expiry_status": dyn_status,
+                }
+            )
+            raw_meta.append((batch, product, rem_h, dyn_status))
+
+        active_model = getattr(app.state, "ml_model", None) or ml_model
+        pricing_results = calculate_dynamic_discount_batch(active_model, batch_items_data)
+
+        # Define 5 scientifically structured lifecycle expiry horizons (from Safe to Final Window)
+        horizon_defs = [
+            ("SAFE", "Safe (> 7d)", lambda h: h > 168.0),
+            ("NEAR_EXPIRY", "Near Expiry (2–7d)", lambda h: 48.0 < h <= 168.0),
+            ("CRITICAL_MODERATE", "Critical (24h–48h)", lambda h: 24.0 < h <= 48.0),
+            ("CRITICAL_URGENT", "Urgent Critical (6h–24h)", lambda h: 6.0 < h <= 24.0),
+            ("DONATION_WINDOW", "Donation Window (≤ 6h)", lambda h: 0.0 < h <= 6.0),
+        ]
+
+        buckets = {
+            key: {"discounts": [], "demands": [], "count": 0, "label": label}
+            for key, label, _ in horizon_defs
+        }
+
+        for i, (batch, product, rem_h, dyn_status) in enumerate(raw_meta):
+            if rem_h <= 0.0:
+                continue  # Skip already expired stock from commercial discount progression profile
+
+            pr = pricing_results[i]
+            disc_pct = pr["dynamic_discount_percent"]
+            demand = batch.daily_demand
+
+            for key, _, matcher in horizon_defs:
+                if matcher(rem_h):
+                    buckets[key]["discounts"].append(disc_pct)
+                    buckets[key]["demands"].append(demand)
+                    buckets[key]["count"] += 1
+                    break
+
+        stages = []
+        labels = []
+        discount_rates = []
+        demand_velocities = []
+
+        for key, label, _ in horizon_defs:
+            b = buckets[key]
+            count = b["count"]
+            avg_disc = round(sum(b["discounts"]) / count, 1) if count > 0 else 0.0
+            avg_dem = round(sum(b["demands"]) / count, 1) if count > 0 else 0.0
+
+            stages.append(
+                TrendStageMetric(
+                    stage_key=key,
+                    stage_label=label,
+                    batch_count=count,
+                    avg_discount_percent=avg_disc,
+                    avg_daily_demand=avg_dem,
+                )
+            )
+            labels.append(label)
+            discount_rates.append(avg_disc)
+            demand_velocities.append(avg_dem)
+
+        insight = (
+            "Profile calculated dynamically from current database inventory batches "
+            "evaluating real XGBoost dynamic discounts and sales demand velocity across expiry horizons."
+        )
+
+        return DashboardTrendsResponse(
+            stages=stages,
+            labels=labels,
+            discount_rates=discount_rates,
+            demand_velocities=demand_velocities,
+            summary_insight=insight,
+        )
+    except Exception as e:
+        logger.error(f"Dashboard trends calculation error: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=fastapi_status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to compute dynamic pricing velocity trends",
         )
 
 

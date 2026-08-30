@@ -193,6 +193,7 @@ def resolve_product(
     manufacturer: Optional[str] = None,
     base_price: Optional[float] = None,
     mrp: Optional[float] = None,
+    category: Optional[str] = None,
 ) -> Product:
     """
     Resolve existing product or create a new one.
@@ -226,10 +227,11 @@ def resolve_product(
             )
             final_sku = f"SKU-{name_slug}-{hash_tag}"
 
+        clean_cat = category.strip() if category and category.strip() else "UNCATEGORIZED"
         product = Product(
             sku=final_sku,
             product_name=product_name.strip(),
-            category="UNCATEGORIZED",
+            category=clean_cat,
             manufacturer=manufacturer.strip() if manufacturer else None,
             base_price=float(base_price if base_price is not None else (mrp or 0.0)),
             mrp=mrp if mrp is not None else None,
@@ -237,11 +239,13 @@ def resolve_product(
         db.add(product)
         db.flush()
     else:
-        # Update MRP or manufacturer if available
+        # Update MRP, manufacturer, or category if available and currently missing
         if mrp is not None and getattr(product, "mrp", None) is None:
             setattr(product, "mrp", mrp)
         if manufacturer and not getattr(product, "manufacturer", None):
             setattr(product, "manufacturer", manufacturer.strip())
+        if category and category.strip() and (not product.category or product.category == "UNCATEGORIZED"):
+            setattr(product, "category", category.strip())
 
     return product
 

@@ -276,7 +276,7 @@ export default function NgoDonations() {
             <table>
               <thead>
                 <tr>
-                  <th className="w-10 text-center">
+                  <th style={{ width: '44px', textAlign: 'center' }}>
                     <input
                       type="checkbox"
                       className="rounded border-subtle bg-white cursor-pointer"
@@ -287,13 +287,13 @@ export default function NgoDonations() {
                       }
                     />
                   </th>
-                  <th>Product Name</th>
-                  <th>SKU</th>
-                  <th>Batch / Lot</th>
-                  <th>Available Stock</th>
-                  <th>Remaining Shelf Life</th>
-                  <th>MRP / Base Price</th>
-                  <th>Donation Quantity</th>
+                  <th style={{ textAlign: 'left' }}>Product Name</th>
+                  <th style={{ textAlign: 'left' }}>SKU</th>
+                  <th style={{ textAlign: 'left' }}>Batch / Lot</th>
+                  <th style={{ textAlign: 'center' }}>Available Stock</th>
+                  <th style={{ textAlign: 'center' }}>Remaining Shelf Life</th>
+                  <th style={{ textAlign: 'right' }}>MRP / Base Price</th>
+                  <th style={{ textAlign: 'center' }}>Donation Quantity</th>
                 </tr>
               </thead>
               <tbody>
@@ -309,7 +309,7 @@ export default function NgoDonations() {
                       data-status={remainingHrs <= 2.0 ? "CRITICAL" : "NEAR_EXPIRY"}
                       style={{ background: isSelected ? 'var(--accent-gold-bg)' : undefined }}
                     >
-                      <td className="text-center">
+                      <td style={{ textAlign: 'center' }}>
                         <input
                           type="checkbox"
                           className="rounded border-subtle bg-white cursor-pointer"
@@ -317,14 +317,14 @@ export default function NgoDonations() {
                           onChange={() => handleCheckboxToggle(c.batch_id)}
                         />
                       </td>
-                      <td className="font-bold text-primary">
-                        {c.product_name}
+                      <td style={{ textAlign: 'left' }}>
+                        <span className="font-bold text-primary block">{c.product_name}</span>
                         {c.manufacturer && (
-                          <span className="block text-xs text-muted font-normal">{c.manufacturer}</span>
+                          <span className="text-xs text-muted font-normal">{c.manufacturer}</span>
                         )}
                       </td>
-                      <td className="font-mono text-xs text-teal font-bold">{c.sku}</td>
-                      <td>
+                      <td style={{ textAlign: 'left' }} className="font-mono text-xs text-teal font-bold">{c.sku}</td>
+                      <td style={{ textAlign: 'left' }}>
                         {c.batch_number ? (
                           <span className="bg-page border border-subtle px-2 py-0.5 rounded text-xs font-mono text-primary font-bold">
                             {c.batch_number}
@@ -333,14 +333,14 @@ export default function NgoDonations() {
                           <span className="text-muted text-xs italic">N/A</span>
                         )}
                       </td>
-                      <td>
+                      <td style={{ textAlign: 'center' }}>
                         <span className="font-mono font-bold text-primary">{c.stock_quantity}</span>
                       </td>
-                      <td>
-                        <div className="flex flex-col items-start gap-1">
+                      <td style={{ textAlign: 'center' }}>
+                        <div className="inline-flex flex-col items-center gap-1">
                           {renderExpiryCountdownPill(remainingHrs, c.remaining_text)}
                           {/* Thin Progress Bar under each row showing remaining window */}
-                          <div style={{ width: '120px', height: '4px', background: 'var(--bg-page)', borderRadius: '999px', overflow: 'hidden', border: '1px solid var(--border-subtle)' }}>
+                          <div style={{ width: '110px', height: '4px', background: 'var(--bg-page)', borderRadius: '999px', overflow: 'hidden', border: '1px solid var(--border-subtle)' }}>
                             <div 
                               style={{ 
                                 width: `${progressPct}%`, 
@@ -352,15 +352,16 @@ export default function NgoDonations() {
                           </div>
                         </div>
                       </td>
-                      <td className="text-xs font-mono font-bold">
+                      <td style={{ textAlign: 'right' }} className="text-xs font-mono font-bold">
                         {c.mrp != null ? `₹${c.mrp.toFixed(2)}` : (c.base_price != null ? `₹${c.base_price.toFixed(2)}` : '-')}
                       </td>
-                      <td>
+                      <td style={{ textAlign: 'center' }}>
                         <input
                           type="number"
                           min="1"
                           max={c.stock_quantity}
-                          className="form-input text-xs py-1 px-2.5 w-24 font-mono font-bold text-primary"
+                          className="form-input text-xs py-1 px-2 font-mono font-bold text-primary text-center"
+                          style={{ width: '76px', height: '32px' }}
                           value={qty}
                           onChange={(e) => handleQuantityChange(c.batch_id, e.target.value, c.stock_quantity)}
                           disabled={!isSelected}
@@ -377,8 +378,8 @@ export default function NgoDonations() {
 
       {/* Confirmation Modal */}
       {showConfirmModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" style={{ position: 'fixed', inset: 0, background: 'rgba(34, 50, 41, 0.6)', display: 'flex', alignItems: 'center', justifyCenter: 'center', zIndex: 9999 }}>
-          <div className="card max-w-lg w-full p-6 shadow-2xl" style={{ width: '100%', maxWidth: '520px', background: '#FFFFFF' }}>
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" style={{ position: 'fixed', inset: 0, background: 'rgba(30, 59, 50, 0.65)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999 }}>
+          <div className="card max-w-lg w-full p-6 shadow-2xl" style={{ width: '100%', maxWidth: '500px', background: '#FFFFFF' }}>
             <h3 className="text-xl font-bold text-primary mb-2 flex items-center gap-2">
               <HeartHandshake className="text-gold" size={22} /> Confirm NGO Relief Dispatch
             </h3>
@@ -419,14 +420,14 @@ export default function NgoDonations() {
 
             <div className="flex justify-end gap-3 pt-2">
               <button
-                className="btn btn-secondary text-xs px-4 py-2"
+                className="btn btn-secondary text-xs px-4"
                 onClick={() => setShowConfirmModal(false)}
                 disabled={submittingDonation}
               >
                 Cancel
               </button>
               <button
-                className="btn btn-primary text-xs px-5 py-2 flex items-center gap-1.5"
+                className="btn btn-primary text-xs px-5 flex items-center gap-1.5"
                 onClick={handleSubmitDonation}
                 disabled={submittingDonation}
               >
@@ -453,7 +454,7 @@ export default function NgoDonations() {
           </div>
 
           <button
-            className="btn btn-secondary text-xs py-1.5 px-3"
+            className="btn btn-secondary text-xs py-1 px-3"
             onClick={fetchDonations}
           >
             Refresh History
@@ -473,33 +474,33 @@ export default function NgoDonations() {
             <table>
               <thead>
                 <tr>
-                  <th>Receipt Ref</th>
-                  <th>Product Name</th>
-                  <th>Batch / SKU</th>
-                  <th>NGO Partner</th>
-                  <th>Qty Donated</th>
-                  <th>Requested Time</th>
-                  <th>Status / Approval</th>
+                  <th style={{ textAlign: 'left' }}>Receipt Ref</th>
+                  <th style={{ textAlign: 'left' }}>Product Name</th>
+                  <th style={{ textAlign: 'left' }}>Batch / SKU</th>
+                  <th style={{ textAlign: 'left' }}>NGO Partner</th>
+                  <th style={{ textAlign: 'center' }}>Qty Donated</th>
+                  <th style={{ textAlign: 'center' }}>Requested Time</th>
+                  <th style={{ textAlign: 'center' }}>Status / Approval</th>
                 </tr>
               </thead>
               <tbody>
                 {donations.map((d) => (
                   <tr key={d.donation_id || d.tax_receipt_reference}>
-                    <td className="text-muted font-mono text-xs">
+                    <td style={{ textAlign: 'left' }} className="text-muted font-mono text-xs">
                       {d.tax_receipt_reference}
                     </td>
-                    <td className="font-bold text-primary">{d.product_name}</td>
-                    <td>
+                    <td style={{ textAlign: 'left' }} className="font-bold text-primary">{d.product_name}</td>
+                    <td style={{ textAlign: 'left' }}>
                       <span className="bg-page border border-subtle px-2 py-0.5 rounded text-xs font-mono text-primary font-bold">
                         {d.batch_number || d.sku}
                       </span>
                     </td>
-                    <td className="text-secondary font-semibold">{d.ngo_name}</td>
-                    <td className="font-mono font-bold text-teal">+{d.quantity}</td>
-                    <td className="text-xs text-muted font-mono">
+                    <td style={{ textAlign: 'left' }} className="text-secondary font-semibold">{d.ngo_name}</td>
+                    <td style={{ textAlign: 'center' }} className="font-mono font-bold text-teal">+{d.quantity}</td>
+                    <td style={{ textAlign: 'center' }} className="text-xs text-muted font-mono">
                       {new Date(d.requested_at || d.dispatch_timestamp).toLocaleTimeString()}
                     </td>
-                    <td>
+                    <td style={{ textAlign: 'center' }}>
                       {d.status === 'PENDING' ? (
                         <span className="status-pill status-near-expiry font-mono text-xs">
                           <Clock size={12} /> {formatCountdown(d.remaining_seconds_to_approve)}

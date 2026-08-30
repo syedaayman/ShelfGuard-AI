@@ -23,34 +23,34 @@ function App() {
         
         <div className="nav-links">
           <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
-            <LayoutDashboard size={19} strokeWidth={2} /> Dashboard
+            <LayoutDashboard size={18} strokeWidth={2} /> Dashboard
           </NavLink>
           <NavLink to="/inventory" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Package size={19} strokeWidth={2} /> Inventory Batches
+            <Package size={18} strokeWidth={2} /> Inventory Batches
           </NavLink>
           <NavLink to="/scanner" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <ScanLine size={19} strokeWidth={2} /> Inventory Scanner
+            <ScanLine size={18} strokeWidth={2} /> Inventory Scanner
           </NavLink>
           <NavLink to="/pricing" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Tag size={19} strokeWidth={2} /> Dynamic Pricing
+            <Tag size={18} strokeWidth={2} /> Dynamic Pricing
           </NavLink>
           <NavLink to="/tax" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Calculator size={19} strokeWidth={2} /> Tax Ledger
+            <Calculator size={18} strokeWidth={2} /> Tax Ledger
           </NavLink>
           <NavLink to="/ngo" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <HeartHandshake size={19} strokeWidth={2} /> NGO Relief Router
+            <HeartHandshake size={18} strokeWidth={2} /> NGO Relief Router
           </NavLink>
         </div>
         
-        {/* NGO Partners Active Cluster (Mirrors "Active Users +70" in Reference Design) */}
+        {/* NGO Partners Cluster */}
         <div className="sidebar-partners">
-          <div className="sidebar-partners-title">NGO Relief Partners</div>
+          <div className="sidebar-partners-title">Partner NGOs</div>
           <div className="avatar-group">
-            <div className="avatar avatar-gold" title="Feeding India (Zomato)">FI</div>
+            <div className="avatar avatar-gold" title="Feeding India">FI</div>
             <div className="avatar" title="Robin Hood Army">RH</div>
             <div className="avatar" title="Akshaya Patra">AP</div>
             <div className="avatar" title="Roti Bank Foundation">RB</div>
-            <div className="avatar avatar-count" title="No Food Waste & 5 More Partner Organizations">+5</div>
+            <div className="avatar avatar-count" title="No Food Waste & 5 Partner Orgs">+5</div>
           </div>
         </div>
       </nav>
