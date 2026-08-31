@@ -7,3 +7,4 @@ __pycache__/
 logs/*.log
 models/*.pkl
 .pytest_cache/
+.venv/
