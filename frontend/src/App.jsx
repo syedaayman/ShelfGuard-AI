@@ -35,7 +35,7 @@ function App() {
             <Tag size={18} strokeWidth={2} /> Dynamic Pricing
           </NavLink>
           <NavLink to="/tax" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            <Calculator size={18} strokeWidth={2} /> Tax Ledger
+            <Calculator size={18} strokeWidth={2} /> Tax Calculator
           </NavLink>
           <NavLink to="/ngo" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <HeartHandshake size={18} strokeWidth={2} /> NGO Relief Router
